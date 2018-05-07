@@ -159,6 +159,9 @@ class RTKWebDeployment(object):
             bitnami_config = os.path.join(apache_config["path"], "/bitnami-apps-prefix.conf")
         else:
             bitnami_config = os.path.join(apache_config["path"], "/bitnami-apps-prefix-dummy.conf")
+
+        print(bitnami_config)
+
         try:
             data = ""
             for statement in open(bitnami_config):  # this isn't robust: will miss statements without linebreaks.
