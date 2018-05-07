@@ -156,11 +156,12 @@ class RTKWebDeployment(object):
                                                              app=config["app"]["name"])
 
         if dummy:
-            bitnami_config = os.path.join(apache_config["path"], "/bitnami-apps-prefix.conf")
+            bitnami_config = os.path.join(apache_config["path"], "bitnami-apps-prefix.conf")
         else:
-            bitnami_config = os.path.join(apache_config["path"], "/bitnami-apps-prefix-dummy.conf")
+            bitnami_config = os.path.join(apache_config["path"], "bitnami-apps-prefix-dummy.conf")
 
-        print(bitnami_config)
+        # print(apache_config)
+        # print(bitnami_config)
 
         try:
             data = ""
