@@ -198,6 +198,7 @@ class RTKWebDeployment(object):
             spec = importlib.util.spec_from_file_location("settings", settings)
             settings = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(settings)
+            settings.APP_NAME = self.name
         else:
             settings = defaults
 
