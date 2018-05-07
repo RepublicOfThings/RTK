@@ -5,7 +5,7 @@ SCHEMA = "http"
 # APP_NAME -> The name of the app to be generated.
 # APP_PATH -> The path to the django projects directory (where the App will be cloned to).
 APP_NAME = "Demo"
-APP_PATH = "/home/republicuser/djangostack-2.0.3-0/apps/django/django_projects/"
+APP_PATH = "/home/republicuser/djangostack-2.0.3-0/apps/django/django_projects"
 STYLE = None
 IMAGE = None
 
