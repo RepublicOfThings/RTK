@@ -6,8 +6,10 @@ def configure_template(config, settings):
     config["app"]["style"] = settings.STYLE
     config["app"]["image"] = settings.IMAGE
     config["apache"]["path"] = settings.APACHE_BITNAMI_PATH
+    print(config["apache"])
     config["apache"]["template"] = config["apache"]["template"].format(app_path=settings.APP_PATH,
                                                                        app_name=settings.APP_NAME)
+    print(config["apache"], config["app"]["name"])
     config["splunk"]["user"] = settings.SPLUNK_USER
     config["splunk"]["pwd"] = settings.SPLUNK_PWD
     config["splunk"]["host"] = settings.SPLUNK_HOST
@@ -28,4 +30,6 @@ def configure_template(config, settings):
     config["github"]["repo"] = settings.GITHUB_REPO
     config["github"]["url"] = config["github"]["url"].format(app_repository=settings.GITHUB_REPO,
                                                              github_user=settings.GITHUB_USER)
+
+
     return config

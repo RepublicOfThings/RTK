@@ -8,7 +8,7 @@ config = {
 
   "apache": {
     "path": "{apache_bitnami_path}",
-    "template": "Include '{app_path}/{app_name}/conf/httpd-prefix.conf'"
+    "template": "Include '{app_path}{app_name}/conf/httpd-prefix.conf'"
   },
 
   "wsgi": {
