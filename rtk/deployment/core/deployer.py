@@ -201,6 +201,7 @@ class RTKWebDeployment(object):
             settings.APP_NAME = self.name
         else:
             settings = defaults
+            settings.APP_NAME = self.name
 
         config = self._prepare_config(config, settings)
         self._prepare_apache(config)
