@@ -8,8 +8,8 @@ SCHEMA = "http"
 APP_NAME = "{app_name]"
 APP_PATH = "{path_to_app_directory}"
 
-# STYLE = None
-# IMAGE = None
+STYLE = None
+IMAGE = None
 
 # APACHE_BITNAMI_PATH -> The path to the Apache Bitnami configuration directory.
 APACHE_BITNAMI_PATH = "{path_to_bitnami_config}"
