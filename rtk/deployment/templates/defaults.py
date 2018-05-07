@@ -4,7 +4,7 @@ SCHEMA = "http"
 
 # APP_NAME -> The name of the app to be generated.
 # APP_PATH -> The path to the django projects directory (where the App will be cloned to).
-APP_NAME = "Example"
+APP_NAME = "Demo"
 APP_PATH = "/home/republicuser/djangostack-2.0.3-0/apps/django/django_projects/"
 STYLE = None
 IMAGE = None
@@ -23,7 +23,7 @@ SPLUNK_HOMES_APP = "rot_smart_homes_app"
 SPLUNK_HOMES_DASH = "smeiling_dashboard_mca_v10_splunk"
 
 SPLUNK_ALERT_APP = "alert_manager"
-SPLUNK_ALERT_DASH = "alert_manager"
+SPLUNK_ALERT_DASH = "incident_posture_clone_v10"
 
 # Splunk Embedding Config
 SPLUNK_URL = "{schema}://{host}:{port}/en-US/account/insecurelogin?username={user}&password={pwd}&return_to=app/{{app}}/{{dash}}"

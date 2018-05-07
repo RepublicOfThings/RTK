@@ -8,9 +8,11 @@ python deployer.py create # deployment an RTKWebApp according to the provided co
 
 from rtk.deployment import RTKWebDeployment
 
-d = RTKWebDeployment("demo")
-d.prepare(settings="./demo_settings/settings.py")
+# d = RTKWebDeployment("demo")
 
-d.create()
+# d.destroy()
+
+# d.prepare(settings="./demo_settings/template.py")
+# d.create()
 
 # need to write apache config code.

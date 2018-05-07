@@ -1,9 +1,10 @@
-from rtk.deployment.templates import deployment, defaults, httpd_prefix, httpd_app, django_app
+from rtk.deployment.templates import deployment, defaults, template, httpd_prefix, httpd_app, django_app
 from .utils import configure_template
 import importlib.util
 import logging
 import json
 import os.path
+import shutil
 
 
 class RTKWebDeployment(object):
@@ -21,21 +22,64 @@ class RTKWebDeployment(object):
         self.name = name
         self.basedir = basedir.format(name)
         self._logger = logging.getLogger("RTKWebDeployment")
-        if not os.path.exists(self.basedir):
-            os.mkdir(self.basedir)
+        self._errors = {}
+
+    def _load_config(self):
+        config_path = os.path.join(self.basedir, "deployment.json")
+        if os.path.exists(config_path):
+            config = json.load(open(config_path, "r"))
+            return config
+        else:
+            self._errors.update({"ConfigFileNotFound": "No configuration found on path {0}".format(config_path)})
+            return {}
+
+    def initialise(self, use_defaults=False):
+        path = "{0}_settings".format(self.name)
+        if not os.path.exists(path):
+            os.mkdir(path)
+
+        if use_defaults:
+            data = open(defaults.__file__, "r").read()
+        else:
+            data = open(template.__file__, "r").read()
+        with open(os.path.join(path, "settings.py"), "w") as settings_file:
+            settings_file.write(data)
 
     def create(self):
         self._log("Creating your new app...")
-        config_path = os.path.join(self.basedir, "deployment.json")
-        config = json.load(open(config_path, "r"))
-        self.clone_base_app(config)
-        self._log("Configuring your new app '{0}'...".format(config['app']['name']))
-        self.configure_app(config)
-        self.configure_apache(config)
-        self._log("Your new '{0}' is ready. Restart Apache.".format(config['app']['name']))
+        config = self._load_config()
+
+        if len(config) == 0:
+            self._deployment_status()
+            return
+
+        try:
+            self.clone_base_app(config)
+        except Exception as error:
+            self._errors.update({"GitHubCloningError": error})
+
+        try:
+            self._log("Configuring your new app '{0}'...".format(config['app']['name']))
+            self.configure_app(config)
+            self.configure_apache(config)
+        except OSError as error:
+            self._errors.update({"EnvironmentError": error})
+        self._deployment_status()
 
     def destroy(self):
-        pass
+        config = self._load_config()
+
+        confirm = input("Are you sure you want to permanently delete '{0}'? Type the app name to continue... \n".format(config["app"]["name"]))
+        if confirm.lower() == self.name:
+            self._log("Destroying your app '{0}'...".format(config["app"]["name"]))
+            app_path = os.path.join(config['app']['path'], config["app"]["name"])
+            self._log("Deleting Django app folder...")
+            shutil.rmtree(app_path)
+            self._log("Reverting Apache and Bitnami configuration...")
+            self.revert_apache(config)
+        else:
+            self._log("Aborted.")
+        self._deployment_status()
 
     def configure_app(self, config):
         self.configure_wsgi(config)
@@ -85,8 +129,48 @@ class RTKWebDeployment(object):
             wsgi_file.write(data)
             wsgi_file.close()
 
+    def revert_apache(self, config):
+        apache_config = config["apache"]
+        include_statement = apache_config["template"].format(path=config["app"]["path"],
+                                                             app=config["app"]["name"])
+        bitnami_config = os.path.join(apache_config["path"], "/bitnami-apps-prefix.conf")
+
+        try:
+            data = ""
+            for statement in open(bitnami_config):  # this isn't robust: will miss statements without linebreaks.
+                if statement == include_statement:
+                    pass
+                else:
+                    data += statement + "\n"
+
+            with open(bitnami_config, "w") as bitnami:
+                bitnami.write(data)
+
+        except FileNotFoundError as error:
+            self._errors.update({"BitnamiConfigError": error})
+            self._log("Could not find a Bitnami configuration.", level=logging.ERROR)
+
     def configure_apache(self, config):
-        pass
+        apache_config = config["apache"]
+        include_statement = apache_config["template"].format(path=config["app"]["path"],
+                                                             app=config["app"]["name"])
+        bitnami_config = os.path.join(apache_config["path"], "/bitnami-apps-prefix.conf")
+        try:
+            data = ""
+            for statement in open(bitnami_config):  # this isn't robust: will miss statements without linebreaks.
+                if statement == include_statement:
+                    return
+                else:
+                    data += statement + "\n"
+
+            data += include_statement + "\n"
+
+            with open(bitnami_config, "w") as bitnami:
+                bitnami.write(data)
+
+        except FileNotFoundError as error:
+            self._errors.update({"BitnamiConfigError": error})
+            self._log("Could not find a Bitnami configuration.", level=logging.ERROR)
 
     def clone_base_app(self, config):
         self._log("Cloning app from GitHub...")
@@ -99,6 +183,8 @@ class RTKWebDeployment(object):
             self._log("Cloned '{0}' to '{1}'.".format(config['app']['name'], app_path))
 
     def prepare(self, settings=None):
+        if not os.path.exists(self.basedir):
+            os.mkdir(self.basedir)
         config = deployment.config.copy()
         if settings is not None:
             spec = importlib.util.spec_from_file_location("settings", settings)
@@ -109,6 +195,17 @@ class RTKWebDeployment(object):
 
         config = self._prepare_config(config, settings)
         self._prepare_apache(config)
+
+    def _deployment_status(self):
+        if len(self._errors) > 0:
+            self._log("!--------------------------------------------------!", level=logging.ERROR)
+            self._log("During setup, the following errors were encountered:", level=logging.ERROR)
+            for error, message in self._errors.items():
+                self._log(">> {0} - {1}".format(error, message), level=logging.ERROR)
+            self._log("Configuration may not have executed successfully.", level=logging.ERROR)
+            self._log("!--------------------------------------------------!", level=logging.ERROR)
+        else:
+            self._log("No errors were detected -- activity was successful.")
 
     def _prepare_config(self, config, settings=None):
         self._log("Preparing your app configuration file...")
@@ -138,5 +235,5 @@ class RTKWebDeployment(object):
 
         self._log("Apache configuration templates are ready.")
 
-    def _log(self, *args, **kwargs):
-        self._logger.info(*args, **kwargs)
+    def _log(self, msg, level=logging.INFO, *args, **kwargs):
+        self._logger.log(level, msg, *args, **kwargs)
