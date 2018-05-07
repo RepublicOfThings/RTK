@@ -45,6 +45,7 @@ parser.add_argument("--destroy", help="Destroy (permanently delete) an app.")
 parser.add_argument("--settings", help="Path to the app's settings folder.", default="./{app_name}_settings/settings.py")
 parser.add_argument("--init", help="Initialise a deployment (create new settings directory & file).")
 parser.add_argument("--defaults", help="Use default configuration (taken from MCA app).", default=False)
+parser.add_argument("--dummy", help="Execute a dummy deployment (don't overwrite Apache files).", default=False)
 parser.add_argument("--deploy", help="Execute deployment steps (prepare->create).")
 
 if __name__ == "__main__":
@@ -65,7 +66,7 @@ if __name__ == "__main__":
         app = args.create
         logger.info("Creating app: {0}".format(app))
         d = RTKWebDeployment(app)
-        d.create()
+        d.create(dummy=args.dummy)
 
     elif args.destroy is not None:
         app = args.destroy

@@ -45,7 +45,7 @@ class RTKWebDeployment(object):
         with open(os.path.join(path, "settings.py"), "w") as settings_file:
             settings_file.write(data)
 
-    def create(self):
+    def create(self, **kwargs):
         self._log("Creating your new app...")
         config = self._load_config()
 
@@ -61,7 +61,7 @@ class RTKWebDeployment(object):
         try:
             self._log("Configuring your new app '{0}'...".format(config['app']['name']))
             self.configure_app(config)
-            self.configure_apache(config)
+            self.configure_apache(config, **kwargs)
         except OSError as error:
             self._errors.update({"EnvironmentError": error})
         self._deployment_status()
@@ -150,11 +150,15 @@ class RTKWebDeployment(object):
             self._errors.update({"BitnamiConfigError": error})
             self._log("Could not find a Bitnami configuration.", level=logging.ERROR)
 
-    def configure_apache(self, config):
+    def configure_apache(self, config, dummy=True):
         apache_config = config["apache"]
         include_statement = apache_config["template"].format(path=config["app"]["path"],
                                                              app=config["app"]["name"])
-        bitnami_config = os.path.join(apache_config["path"], "/bitnami-apps-prefix.conf")
+
+        if dummy:
+            bitnami_config = os.path.join(apache_config["path"], "/bitnami-apps-prefix.conf")
+        else:
+            bitnami_config = os.path.join(apache_config["path"], "/bitnami-apps-prefix-dummy.conf")
         try:
             data = ""
             for statement in open(bitnami_config):  # this isn't robust: will miss statements without linebreaks.
