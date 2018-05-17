@@ -4,6 +4,7 @@ import logging
 
 
 """
+
 Creating an App
 
 The creation process is broken into 3 steps: Generating User Settings, Generating Deployment Configuration,
@@ -47,6 +48,7 @@ parser.add_argument("--init", help="Initialise a deployment (create new settings
 parser.add_argument("--defaults", help="Use default configuration (taken from MCA app).", default=False)
 parser.add_argument("--dummy", help="Execute a dummy deployment (don't overwrite Apache files).", default=False)
 parser.add_argument("--deploy", help="Execute deployment steps (prepare->create).")
+
 
 if __name__ == "__main__":
     args = parser.parse_args()
