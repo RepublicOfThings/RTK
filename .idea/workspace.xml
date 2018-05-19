@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fd4d2f2-f118-49dd-be25-a0dfa7c5319e" name="Default" comment="Added documentation.">
-      <change afterPath="$PROJECT_DIR$/deploy.py" afterDir="false" />
+    <list default="true" id="8fd4d2f2-f118-49dd-be25-a0dfa7c5319e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy_mca_clone.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtk/deployment/core/deployer.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/deployment/core/deployer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtk/deployment/core/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/deployment/core/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtk/deployment/templates/defaults.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/deployment/templates/defaults.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtk/deployment/templates/template.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/deployment/templates/template.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtk_deploy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,29 +20,17 @@
       <file leaf-file-name="sandbox.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sandbox.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="240">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deployer.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="deployer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rtk/deployment/core/deployer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-60">
+            <state relative-caret-position="-29">
               <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deploy.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/deploy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -62,7 +40,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="405">
-                <caret line="27" selection-start-line="27" selection-end-line="27" />
+                <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
               </first_editor>
               <second_editor>
                 <js_state />
@@ -85,6 +63,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="64">
               <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deploy.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deploy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1008">
+              <caret line="98" column="82" selection-start-line="98" selection-start-column="82" selection-end-line="98" selection-end-column="82" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -187,6 +177,29 @@
             <path>
               <item name="RTK2" type="b2602c69:ProjectViewProjectNode" />
               <item name="RTK2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RTK2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RTK2" type="462c0819:PsiDirectoryNode" />
+              <item name=".rtk_deployment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RTK2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RTK2" type="462c0819:PsiDirectoryNode" />
+              <item name="rtk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RTK2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RTK2" type="462c0819:PsiDirectoryNode" />
+              <item name="rtk" type="462c0819:PsiDirectoryNode" />
+              <item name="deployment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RTK2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RTK2" type="462c0819:PsiDirectoryNode" />
+              <item name="rtk" type="462c0819:PsiDirectoryNode" />
+              <item name="deployment" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -374,7 +387,21 @@
       <option name="project" value="LOCAL" />
       <updated>1526578407404</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Changed command-line app. Stream-lined deployment.">
+      <created>1526742065474</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1526742065474</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Changed command-line app. Stream-lined deployment.">
+      <created>1526742723758</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1526742723758</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -387,8 +414,8 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.87467587" weight="0.28" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17238913" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.87467587" visible="true" weight="0.28" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17238913" />
       <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="R Graphics" order="3" />
@@ -423,7 +450,8 @@
     <MESSAGE value="Completed Alpha -- hotfix (6)." />
     <MESSAGE value="Completed Alpha -- hotfix (7)." />
     <MESSAGE value="Added documentation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added documentation." />
+    <MESSAGE value="Changed command-line app. Stream-lined deployment." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed command-line app. Stream-lined deployment." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sandbox.py">
@@ -673,13 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deploy_mca_clone.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -687,11 +708,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="405">
-            <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
           </first_editor>
           <second_editor>
             <js_state />
@@ -699,27 +734,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox.py">
+    <entry file="file://$PROJECT_DIR$/deploy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="1008">
+          <caret line="98" column="82" selection-start-line="98" selection-start-column="82" selection-end-line="98" selection-end-column="82" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rtk/deployment/core/deployer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
+        <state relative-caret-position="-29">
           <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

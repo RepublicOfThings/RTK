@@ -17,7 +17,7 @@ class RTKWebDeployment(object):
         self._errors = {}
 
     def _load_config(self):
-        config_path = os.path.join(self.basedir, "conf", "deployment.json")
+        config_path = os.path.join(self.basedir, "config", "deployment.json")
         if os.path.exists(config_path):
             config = json.load(open(config_path, "r"))
             return config
