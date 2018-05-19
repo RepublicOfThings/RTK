@@ -10,7 +10,7 @@ STYLE = None
 LOGO = None
 
 # BITNAMI TOPLEVEL
-CTLSCRIPT = "/home/republicuser/djangostack-2.0.3-0/ctlscript.shcd .rtk_deployment"
+CTLSCRIPT = "/home/republicuser/djangostack-2.0.3-0/ctlscript.sh .rtk_deployment"
 
 # APACHE_BITNAMI_PATH -> The path to the Apache Bitnami configuration directory.
 APACHE_BITNAMI_PATH = "/home/republicuser/djangostack-2.0.3-0/apache2/conf/bitnami"
