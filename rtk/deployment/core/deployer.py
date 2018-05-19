@@ -164,8 +164,6 @@ class RTKWebDeployment(object):
         data = open(temp_file_path, "r").read()
 
         with open(wsgi_file_path, "w") as wsgi_file:
-            print(wsgi_file_path)
-            print(data)
             wsgi_file.write(data)
             wsgi_file.close()
 
@@ -208,9 +206,9 @@ class RTKWebDeployment(object):
                 elif statement.strip() == "\n":
                     pass
                 else:
-                    data += statement + "\n"
+                    data += statement
 
-            data += include_statement + "\n"
+            data += include_statement
 
             with open(bitnami_config, "w") as bitnami:
                 bitnami.write(data)

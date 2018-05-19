@@ -6,18 +6,13 @@ python deployer.py create # deployment an RTKWebApp according to the provided co
 
 """
 
-import os
-import subprocess
-# os.mkdir(".toaster")
-subprocess.call(["chmod", "777", ".toaster"])
 
-from rtk.deployment import RTKWebDeployment
+with open("bangers.txt") as bangers:
+    data = ""
 
-# d = RTKWebDeployment("demo")
+    for line in bangers:
+        if line != "\n":
+            data += line
 
-# d.destroy()
 
-# d.prepare(settings="./demo_settings/template.py")
-# d.create()
-
-# need to write apache config code.
+    print(data)
