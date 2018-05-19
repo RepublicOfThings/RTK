@@ -164,6 +164,8 @@ class RTKWebDeployment(object):
         data = open(temp_file_path, "r").read()
 
         with open(wsgi_file_path, "w") as wsgi_file:
+            print(wsgi_file_path)
+            print(data)
             wsgi_file.write(data)
             wsgi_file.close()
 
