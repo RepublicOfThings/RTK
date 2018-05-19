@@ -17,19 +17,20 @@ def _apps():
 
 
 def _init_app(args, logger):
-    logger.info("Initialising a new app...")
+    logger.info("Preparing your new app...")
     if args.name is not None:
         app_name = args.name
     else:
         app_name = input("App Name:")
 
     d = RTKWebDeployment(app_name)
-    if input("Configure splunk now? y/n").lower() == "y":
+    if input("Configure splunk now? y/n").strip().lower() == "y":
         splunk_username = input("Splunk username:")
         splunk_pwd = getpass.getpass("Splunk password:")
         d.initialise(splunk_user=splunk_username, splunk_password=splunk_pwd, use_defaults=args.defaults)
     else:
         d.initialise(use_defaults=args.defaults)
+    logger.info("Prepared your new app for deployment.")
 
 
 def _select_app():
@@ -56,14 +57,14 @@ def _deploy_app(args, logger):
     if args.name is None:
         apps = _apps()
         if len(apps) == 0:
-            init = input("No apps are available. Initialise a new one? y/n").lower()
+            init = input("No apps are available. Initialise a new one? y/n").strip().lower()
             if init == "y":
                 _init_app(args, logger)
             else:
                 print("Please initialise an app before attempting to re-deploy. Use the 'init' command.")
                 return
         elif len(apps) == 1:
-            default = input("Deploy '{0}'? y/n".format(apps[0])).lower()
+            default = input("Deploy '{0}'? y/n".format(apps[0])).strip().lower()
             if default == "y":
                 selection = apps[0]
             else:
@@ -75,7 +76,7 @@ def _deploy_app(args, logger):
         selection = args.name
         if selection not in _apps():
             print("The provided app name '{0}' is not available for installation.".format(selection))
-            if input("Do you want to select another app? y/n").lower() == "y":
+            if input("Do you want to select another app? y/n").strip().lower() == "y":
                 selection = _select_app()
             else:
                 logger.info("Aborted deployment.")
@@ -83,6 +84,8 @@ def _deploy_app(args, logger):
     if selection is not None:
         d = RTKWebDeployment(selection)
         d.prepare()
+        logger.info("Deployment configuration ready, beginning deployment...")
+        d.create()
     else:
         logger.info("Invalid app selected for deployment.")
         logger.info("Aborted deployment.")
