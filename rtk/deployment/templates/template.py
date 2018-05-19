@@ -5,11 +5,11 @@ SCHEMA = "http"
 
 # APP_NAME -> The name of the app to be generated.
 # APP_PATH -> The path to the django projects directory (where the App will be cloned to).
-APP_NAME = "{app_name]"
+APP_NAME = "{app_name}"
 APP_PATH = "{path_to_app_directory}"
 
 STYLE = None
-IMAGE = None
+LOGO = None
 
 # APACHE_BITNAMI_PATH -> The path to the Apache Bitnami configuration directory.
 APACHE_BITNAMI_PATH = "{path_to_bitnami_config}"

@@ -3,21 +3,13 @@ from .utils import configure_template
 import importlib.util
 import logging
 import json
+import re
 import os.path
 import shutil
 
 
 class RTKWebDeployment(object):
-    def __init__(self, name, basedir="{0}_deployment/", level=logging.DEBUG):
-        # ./deploy.sh --prepare=demo --settings=custom.py
-        # ./deploy.sh --create=demo
-        # ./deploy.sh --destroy=demo
-        # ./deploy.sh --new
-
-        # >> Project Name: Demo
-        # >> Project Path: djangostack-2.0.3-0 ... (use default? y/n)
-        # >> Project Schema: http (use default? y/n)
-
+    def __init__(self, name, basedir=".rtk_deployment/{0}", level=logging.DEBUG):
         logging.basicConfig(level=level)
         self.name = name
         self.basedir = basedir.format(name)
@@ -25,7 +17,7 @@ class RTKWebDeployment(object):
         self._errors = {}
 
     def _load_config(self):
-        config_path = os.path.join(self.basedir, "deployment.json")
+        config_path = os.path.join(self.basedir, "conf", "deployment.json")
         if os.path.exists(config_path):
             config = json.load(open(config_path, "r"))
             return config
@@ -33,15 +25,21 @@ class RTKWebDeployment(object):
             self._errors.update({"ConfigFileNotFound": "No configuration found on path {0}".format(config_path)})
             return {}
 
-    def initialise(self, use_defaults=False):
-        path = "{0}_settings".format(self.name)
+    def initialise(self, use_defaults=False, **kwargs):
+        path = os.path.join(self.basedir, "app")
         if not os.path.exists(path):
-            os.mkdir(path)
+            os.makedirs(path)
 
         if use_defaults:
             data = open(defaults.__file__, "r").read()
         else:
             data = open(template.__file__, "r").read()
+
+        for key, value in kwargs.items():
+            data = re.sub(r"{"+key+"}", value, data)
+
+        data = re.sub(r"{app_name}", self.name, data)
+
         with open(os.path.join(path, "settings.py"), "w") as settings_file:
             settings_file.write(data)
 
@@ -160,14 +158,13 @@ class RTKWebDeployment(object):
         else:
             bitnami_config = os.path.join(apache_config["path"], "bitnami-apps-prefix-dummy.conf")
 
-        # print(apache_config)
-        # print(bitnami_config)
-
         try:
             data = ""
             for statement in open(bitnami_config):  # this isn't robust: will miss statements without linebreaks.
                 if statement == include_statement:
                     return
+                elif statement.strip() == "\n":
+                    pass
                 else:
                     data += statement + "\n"
 
@@ -190,9 +187,15 @@ class RTKWebDeployment(object):
             os.system("git clone {0} {1}".format(git_url, app_path))
             self._log("Cloned '{0}' to '{1}'.".format(config['app']['name'], app_path))
 
-    def prepare(self, settings=None):
+    def prepare(self):
         if not os.path.exists(self.basedir):
-            os.mkdir(self.basedir)
+            os.makedirs(self.basedir)
+
+        if os.path.exists(os.path.join(self.basedir, "app", "settings.py")):
+            settings = os.path.join(self.basedir, "app", "settings.py")
+        else:
+            settings = None
+
         config = deployment.config.copy()
         if settings is not None:
             spec = importlib.util.spec_from_file_location("settings", settings)
@@ -220,8 +223,11 @@ class RTKWebDeployment(object):
     def _prepare_config(self, config, settings=None):
         self._log("Preparing your app configuration file...")
         config = configure_template(config, settings)
-        path = os.path.join(self.basedir, "deployment.json")
+        path = os.path.join(self.basedir, "config")
+        if not os.path.exists(path):
+            os.makedirs(path)
         self._log("App configuration is ready.")
+        path = os.path.join(path, "deployment.json")
         json.dump(config, open(path, "w"), indent=4)
         return config
 
@@ -233,12 +239,12 @@ class RTKWebDeployment(object):
                                       GLOBAL="GLOBAL",
                                       GROUP="GROUP")
 
-        app_path = os.path.join(self.basedir, "httpd-app-template.conf")
+        app_path = os.path.join(self.basedir, "config", "httpd-app-template.conf")
         with open(app_path, "w") as app_file:
             self._log("Writing httpd-app-template...")
             app_file.write(app)
 
-        prefix_path = os.path.join(self.basedir, "httpd-prefix-template.conf")
+        prefix_path = os.path.join(self.basedir, "config", "httpd-prefix-template.conf")
         with open(prefix_path, "w") as prefix_file:
             self._log("Writing httpd-prefix-template...")
             prefix_file.write(prefix)

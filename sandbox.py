@@ -6,6 +6,10 @@ python deployer.py create # deployment an RTKWebApp according to the provided co
 
 """
 
+import os
+
+os.mkdir(".toaster")
+
 from rtk.deployment import RTKWebDeployment
 
 # d = RTKWebDeployment("demo")
