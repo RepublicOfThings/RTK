@@ -153,7 +153,7 @@ class RTKWebDeployment(object):
         project_path = os.path.join(config['app']['path'], config['app']['name'])
         wsgi_conf_path = os.path.join(project_path, "conf")
         wsgi_file_path = os.path.join(wsgi_conf_path, filename)
-        temp_file_path = os.path.join(self.basedir, wsgi_file)
+        temp_file_path = os.path.join(self.basedir, "config", wsgi_file)
         if not os.path.exists(wsgi_conf_path):
             os.makedirs(wsgi_conf_path)
 
