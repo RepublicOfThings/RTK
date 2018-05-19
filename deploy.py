@@ -122,3 +122,4 @@ if __name__ == "__main__":
 
         app = RTKApp(selection)
         app.authorise()
+        app.restart()

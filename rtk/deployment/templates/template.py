@@ -11,6 +11,9 @@ APP_PATH = "{path_to_app_directory}"
 STYLE = None
 LOGO = None
 
+# BITNAMI TOPLEVEL
+CTLSCRIPT = "{ctlscript}"
+
 # APACHE_BITNAMI_PATH -> The path to the Apache Bitnami configuration directory.
 APACHE_BITNAMI_PATH = "{path_to_bitnami_config}"
 

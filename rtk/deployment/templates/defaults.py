@@ -9,6 +9,9 @@ APP_PATH = "/home/republicuser/djangostack-2.0.3-0/apps/django/django_projects"
 STYLE = None
 LOGO = None
 
+# BITNAMI TOPLEVEL
+CTLSCRIPT = "/home/republicuser/djangostack-2.0.3-0/ctlscript"
+
 # APACHE_BITNAMI_PATH -> The path to the Apache Bitnami configuration directory.
 APACHE_BITNAMI_PATH = "/home/republicuser/djangostack-2.0.3-0/apache2/conf/bitnami"
 

@@ -18,6 +18,10 @@ class RTKApp(object):
         if self.status == 3:
             subprocess.call(["chmod", permissions, self.django_path])
 
+    def restart(self):
+        if self.status == 3:
+            subprocess.call(["bash", self._config["apache"]["ctlscript"], "restart"])
+
     @property
     def status(self):
         out = 0

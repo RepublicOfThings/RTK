@@ -5,6 +5,7 @@ def configure_template(config, settings):
     config["app"]["path"] = settings.APP_PATH
     config["app"]["style"] = settings.STYLE
     config["app"]["image"] = settings.LOGO
+    config["apache"]["ctlscript"] = settings.CTLSCRIPT
     config["apache"]["path"] = settings.APACHE_BITNAMI_PATH
     config["apache"]["template"] = config["apache"]["template"].format(app_path=settings.APP_PATH,
                                                                        app_name=settings.APP_NAME)
