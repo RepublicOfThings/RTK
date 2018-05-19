@@ -1,1 +1,1 @@
-from .deployer import RTKWebDeployment
+from .deployer import RTKWebDeployment, RTKApp

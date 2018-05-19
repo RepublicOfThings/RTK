@@ -5,7 +5,38 @@ import logging
 import json
 import re
 import os.path
+import os
+import subprocess
 import shutil
+
+
+class RTKApp(object):
+    def __init__(self, name):
+        self.name = name
+
+    def authorise(self, permissions="777"):
+        if self.status == 3:
+            subprocess.call(["chmod", permissions, self.django_path])
+
+    @property
+    def status(self):
+        out = 0
+        if os.path.exists(os.path.join(".rtk_deployment", self.name, "app", "settings.py")):
+            out = 1
+        if os.path.exists(os.path.join(".rtk_deployment", self.name, "config", "deployment.json")):
+            out = 2
+        if out == 2:
+            if os.path.exists(self.django_path):
+                out = 3
+        return out
+
+    @property
+    def django_path(self):
+        return os.path.join(self._config["app"]["path"], self.name)
+
+    @property
+    def _config(self):
+        return json.load(open(os.path.join(".rtk_deployment", self.name, "config", "deployment.json")))
 
 
 class RTKWebDeployment(object):
@@ -15,6 +46,11 @@ class RTKWebDeployment(object):
         self.basedir = basedir.format(name)
         self._logger = logging.getLogger("RTKWebDeployment")
         self._errors = {}
+
+    @property
+    def app_path(self):
+        config = self._load_config()
+        return os.path.join(config["app"]["path"], self.name)
 
     def _load_config(self):
         config_path = os.path.join(self.basedir, "config", "deployment.json")

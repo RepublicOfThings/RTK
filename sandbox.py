@@ -7,8 +7,9 @@ python deployer.py create # deployment an RTKWebApp according to the provided co
 """
 
 import os
-
-os.mkdir(".toaster")
+import subprocess
+# os.mkdir(".toaster")
+subprocess.call(["chmod", "777", ".toaster"])
 
 from rtk.deployment import RTKWebDeployment
 

@@ -1,1 +1,1 @@
-from .core import RTKWebDeployment
+from .core import RTKWebDeployment, RTKApp

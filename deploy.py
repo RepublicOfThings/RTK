@@ -1,4 +1,4 @@
-from rtk.deployment import RTKWebDeployment
+from rtk.deployment import RTKWebDeployment, RTKApp
 import argparse
 import logging
 import getpass
@@ -34,7 +34,7 @@ def _init_app(args, logger):
 
 
 def _select_app():
-    print("The following apps are ready for deployment:")
+    print("The following apps are available:")
     for app in _apps():
         print(app)
 
@@ -87,7 +87,7 @@ def _deploy_app(args, logger):
         logger.info("Deployment configuration ready, beginning deployment...")
         d.create()
     else:
-        logger.info("Invalid app selected for deployment.")
+        logger.error("Invalid app selected for deployment.")
         logger.info("Aborted deployment.")
 
 
@@ -113,3 +113,12 @@ if __name__ == "__main__":
 
     elif args.command == "app":
         _deploy_app(args, logger)
+
+    elif args.command == "makelive":
+        if args.name is None:
+            selection = _select_app()
+        else:
+            selection = args.name
+
+        app = RTKApp(selection)
+        app.authorise()
