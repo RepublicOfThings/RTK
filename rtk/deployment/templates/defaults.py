@@ -10,7 +10,7 @@ STYLE = None
 LOGO = None
 
 # BITNAMI TOPLEVEL
-CTLSCRIPT = "/home/republicuser/djangostack-2.0.3-0/ctlscript.sh .rtk_deployment"
+CTLSCRIPT = "/home/republicuser/djangostack-2.0.3-0/ctlscript.sh"
 
 # APACHE_BITNAMI_PATH -> The path to the Apache Bitnami configuration directory.
 APACHE_BITNAMI_PATH = "/home/republicuser/djangostack-2.0.3-0/apache2/conf/bitnami"
@@ -24,7 +24,7 @@ SPLUNK_PORT = "8000"
 # Splunk App Config
 SPLUNK_HOMES_APP = "rot_smart_homes_app"
 SPLUNK_HOMES_DASH = "smeiling_dashboard_mca_v10_splunk"
-
+cd
 SPLUNK_ALERT_APP = "alert_manager"
 SPLUNK_ALERT_DASH = "incident_posture_clone_v10"
 
