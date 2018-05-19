@@ -209,7 +209,7 @@ class RTKWebDeployment(object):
                     data += statement
 
             data += include_statement
-            data = "\n".join([ll.rstrip() for ll in data.splitlines() if ll.strip()])
+            data = "\n".join(list(set([ll.rstrip() for ll in data.splitlines() if ll.strip()])))
 
             with open(bitnami_config, "w") as bitnami:
                 bitnami.write(data)

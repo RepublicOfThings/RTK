@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fd4d2f2-f118-49dd-be25-a0dfa7c5319e" name="Default" comment="Changed command-line app. Stream-lined deployment.">
+    <list default="true" id="8fd4d2f2-f118-49dd-be25-a0dfa7c5319e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rtk/deployment/core/deployer.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/deployment/core/deployer.py" afterDir="false" />
     </list>
@@ -31,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/rtk/deployment/core/deployer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="211" column="16" selection-start-line="211" selection-start-column="16" selection-end-line="211" selection-end-column="16" />
+              <caret line="211" column="96" selection-start-line="211" selection-start-column="96" selection-end-line="211" selection-end-column="96" />
               <folding>
                 <element signature="e#0#104#0" expanded="true" />
               </folding>
@@ -481,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526747204126</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Changed command-line app. Stream-lined deployment.">
+      <created>1526747423131</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1526747423131</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -847,7 +854,7 @@
     <entry file="file://$PROJECT_DIR$/rtk/deployment/core/deployer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="211" column="16" selection-start-line="211" selection-start-column="16" selection-end-line="211" selection-end-column="16" />
+          <caret line="211" column="96" selection-start-line="211" selection-start-column="96" selection-end-line="211" selection-end-column="96" />
           <folding>
             <element signature="e#0#104#0" expanded="true" />
           </folding>
