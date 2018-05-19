@@ -141,7 +141,7 @@ class RTKWebDeployment(object):
                                                  url=splunk["url"]
                                                  )
         project_path = os.path.join(config['app']['path'], config['app']['name'])
-        settings_path = os.path.join(project_path, "rtkapp", "app_settings.py")
+        settings_path = os.path.join(project_path, "webapp", "app_settings.py")
         with open(settings_path, "w") as settings_file:
             settings_file.write(app_settings)
             settings_file.close()
