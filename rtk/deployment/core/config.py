@@ -106,20 +106,22 @@ class RTKAppConfig(object):
                 settings_file.close()
 
     def settings(self, key_pattern=r'{__SECRET_KEY__}'):
+        dlog.info("Configuring app settings...")
         settings_path = os.path.join(self.app.django_path, self.app.project, "settings.py")
         with open(settings_path, "r") as settings:
             content = settings.read()
             settings.close()
-            if re.search(key_pattern, content):
-                content = re.sub(key_pattern, keys.generate_secret(), content)
-                content = re.sub("r{__PROJECT__}", self.app.project, content)
-                if self.app.dummy:
-                    print("DummyCommand: Write to '{0}''".format(settings_path))
-                    print("DummyCommand: Dumping... \n {0}".format(content))
-                else:
-                    with open(settings_path, "w") as settings:
-                        settings.write(content)
-                        settings.close()
+
+            content = re.sub(key_pattern, keys.generate_secret(), content)
+            content = re.sub("r{__PROJECT__}", self.app.project, content)
+            if self.app.dummy:
+                print("DummyCommand: Write to '{0}''".format(settings_path))
+                print("DummyCommand: Dumping... \n {0}".format(content))
+            else:
+                with open(settings_path, "w") as updated:
+                    updated.write(content)
+                    updated.close()
+            dlog.info("Configured app settings.")
 
     @property
     def _deployment(self):

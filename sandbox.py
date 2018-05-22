@@ -12,6 +12,10 @@ import re
 
 logging.basicConfig(level=logging.DEBUG)
 
+content = open("test.py").read()
+content = re.sub(r"{__SECRET_KEY__}", 'key', content)
+content = re.sub(r"{__PROJECT__}", 'test', content)
+print(content)
 
-app = RTKApp("demo", mode="live")
-app.build(default=True)
+# app = RTKApp("demo", mode="live")
+# app.build(default=True)
