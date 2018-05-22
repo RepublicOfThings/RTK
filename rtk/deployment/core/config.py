@@ -113,7 +113,7 @@ class RTKAppConfig(object):
             settings.close()
 
             content = re.sub(r"{__SECRET_KEY__}", keys.generate_secret(), content)
-            content = re.sub(r"{__PROJECT__}", 'test', content)
+            content = re.sub(r"{__PROJECT__}", self.app.project, content)
             if self.app.dummy:
                 print("DummyCommand: Write to '{0}''".format(settings_path))
                 print("DummyCommand: Dumping... \n {0}".format(content))
