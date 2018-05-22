@@ -44,7 +44,6 @@ def add(name, dummy=False, default=True):
     else:
         app = _add_app(input("App name: "), dummy)
     app.build(default=default)
-    app.configure()
 
 
 def activate(name, dummy=False):
@@ -53,7 +52,7 @@ def activate(name, dummy=False):
     else:
         selection = _select_app()
         if selection is not None:
-            app = RTKApp(name)
+            app = RTKApp(selection)
         else:
             return None
 
