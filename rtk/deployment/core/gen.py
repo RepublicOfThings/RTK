@@ -59,7 +59,7 @@ class RTKAppBuilder(object):
 
         app_path = os.path.join(self.app.basedir, self.app.name, "config", "httpd-prefix-template.conf")
 
-        dlog.info("Witing '{0}' file to '{1}'...".format("httpd-prefix-template.conf", app_path))
+        dlog.info("Writing '{0}' file to '{1}'...".format("httpd-prefix-template.conf", app_path))
 
         with open(app_path, "w") as httpd_prefix:
             httpd_prefix.write(prefix)
@@ -73,7 +73,7 @@ class RTKAppBuilder(object):
 
         app_path = os.path.join(self.app.basedir, self.app.name, "config", "httpd-app-template.conf")
 
-        dlog.info("Witing '{0}' file to '{1}'...".format("httpd-app-template.conf", app_path))
+        dlog.info("Writing '{0}' file to '{1}'...".format("httpd-app-template.conf", app_path))
 
         with open(app_path, "w") as app_file:
             app_file.write(app)

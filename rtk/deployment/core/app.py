@@ -27,7 +27,7 @@ class RTKApp(object):
 
     def clone(self):
         dlog.info("Cloning app ...")
-        if self.dummy:
+        if not self.dummy:
             dlog.info("Cloning from {0} to {1}.".format(self.github_url, self.django_path))
             os.system("git clone {0} {1}".format(self.github_url, self.django_path))
             dlog.info("Done cloning.")
