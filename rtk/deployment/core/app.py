@@ -51,12 +51,12 @@ class RTKApp(object):
             dlog.info("App cannot be deployed - make sure to call 'build' first.")
 
     def delete(self):
-        if input("Are you sure you want to delete the following django directory '{0}'? y/n").lower().strip() == "y":
+        if input("Are you sure you want to delete the following django directory '{0}'? y/n".format(self.django_path)).lower().strip() == "y":
             shutil.rmtree(self.django_path)
             self.configure.clean()
-        if input("Are you sure you want to delete the following deployment directory '{0}'? y/n").lower().strip() == "y":
+        if input("Are you sure you want to delete the following deployment directory '{0}'? y/n".format(self.path)).lower().strip() == "y":
             shutil.rmtree(self.path)
-
+        dlog.info("The app '{0}' has been removed.".format(self.name))
 
     def authorise(self, permissions="777"):
         if self.status >= READY:
