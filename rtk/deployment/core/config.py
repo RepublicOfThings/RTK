@@ -141,6 +141,7 @@ class RTKAppConfig(object):
 
             data += include_statement
             data = "\n".join(list(set([ll.rstrip() for ll in data.splitlines() if ll.strip()])))
+            dlog.info("Writing Apache data '{0}'...".format(data))
             return data
 
     def __getattr__(self, item):
