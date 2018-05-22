@@ -64,6 +64,7 @@ class RTKApp(object):
 
     def reactivate(self):
         self.configure.apache()
+        dlog.info("The app '{0}' has been reactivated.".format(self.name))
 
     def authorise(self, permissions="777"):
         if self.status >= READY:
@@ -72,7 +73,7 @@ class RTKApp(object):
             dlog.info("Access permissions changed.")
 
     def restart(self):
-        dlog.info("Restarting apache with '{0}'...".format(self.deployment["apache"]["ctlscript"]))
+        dlog.info("Restarting apache...")
         subprocess.call(["bash", self.deployment["apache"]["ctlscript"], "restart"])
         dlog.info("Restart complete.")
 

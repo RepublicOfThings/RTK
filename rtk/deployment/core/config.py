@@ -54,23 +54,19 @@ class RTKAppConfig(object):
     def clean(self):
         config = self._deployment
         bitnami_prefix_path = os.path.join(self._apache["path"], "bitnami-apps-prefix.conf")
-        new_app_include = self._apache["template"].format(path=config["app"]["path"],
+        target = self._apache["template"].format(path=config["app"]["path"],
                                                     app=config["app"]["name"])
-        data = ""
         dlog.info("Loading Apache data from '{0}'...".format(bitnami_prefix_path))
-        for statement in open(bitnami_prefix_path):  # this isn't robust: will miss statements without linebreaks.
-            if statement == new_app_include:
-                pass
-            elif statement.strip() == "\n":
-                pass
-            else:
-                data += statement + "\n"
+        with open(bitnami_prefix_path) as file:
+            data = ""
+            for line in file:
+                if line.replace("\n", "").strip() != target.replace("\n", "").strip():
+                    data += line
 
         data = "\n".join(list(set([ll.rstrip() for ll in data.splitlines() if ll.strip()])))
         dlog.info("Writing Apache data '{0}'...".format(data))
-        if data is not None:
-            with open(bitnami_prefix_path, "w") as bitnami_file:
-                bitnami_file.write(data)
+        with open(bitnami_prefix_path, "w") as bitnami_file:
+            bitnami_file.write(data)
 
     def _write_wsgi_conf(self, wsgi: dict) -> None:
         conf_path = os.path.join(self.app.django_path, "conf")

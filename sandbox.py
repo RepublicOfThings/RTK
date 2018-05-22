@@ -7,15 +7,14 @@ python deployer.py create # deployment an RTKWebApp according to the provided co
 """
 
 import logging
-from rtk.deployment import RTKApp
-import re
 
-logging.basicConfig(level=logging.DEBUG)
+target = "Include '/home/republicuser/djangostack-2.0.3-0/apps/django/django_projects/clean/conf/httpd-prefix.conf'"
+with open("example") as file:
+    data = ""
+    for line in file:
+        if line.replace("\n", "").strip() != target.replace("\n", "").strip():
+            data += line
+        else:
+            print(line)
 
-content = open("test.py").read()
-content = re.sub(r"{__SECRET_KEY__}", 'key', content)
-content = re.sub(r"{__PROJECT__}", 'test', content)
-print(content)
-
-# app = RTKApp("demo", mode="live")
-# app.build(default=True)
+    open("cleaned", "w").write(data)

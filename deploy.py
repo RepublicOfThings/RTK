@@ -119,4 +119,3 @@ if __name__ == "__main__":
 
     else:
         logger.error("Unknown command '{0}'.".format(args.command))
-
