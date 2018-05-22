@@ -131,6 +131,7 @@ class RTKAppConfig(object):
             return include_statement
         else:
             data = ""
+            dlog.info("Loading Apache data from '{0}'...".format(prefix_file))
             for statement in open(prefix_file):  # this isn't robust: will miss statements without linebreaks.
                 if statement == include_statement:
                     return
