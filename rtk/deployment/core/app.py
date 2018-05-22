@@ -35,9 +35,12 @@ class RTKApp(object):
             print("DummyCommand: git clone {0} {1}".format(self.github_url, self.django_path))
 
     def deploy(self):
+        print(self.status)
         if self.status == READY:
             dlog.info("Executing deployment...")
             self.clone()
+            dlog.info("Configuring app...")
+            self.configure()
             dlog.info("Authorising access to new app...")
             self.authorise()
             dlog.info("Beginning restart...")

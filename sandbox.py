@@ -11,7 +11,7 @@ from rtk.deployment import RTKApp
 
 logging.basicConfig(level=logging.DEBUG)
 
-app = RTKApp("demo", mode="dummy")
+app = RTKApp("demo", mode="live")
 app.build(default=True)
 app.configure()
 app.deploy()
