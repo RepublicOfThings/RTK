@@ -6,13 +6,12 @@ python deployer.py create # deployment an RTKWebApp according to the provided co
 
 """
 
+import logging
+from rtk.deployment import RTKApp
 
-with open("bangers.txt") as bangers:
-    data = ""
+logging.basicConfig(level=logging.DEBUG)
 
-    for line in bangers:
-        if line != "\n":
-            data += line
-
-
-    print(data)
+app = RTKApp("demo", mode="dummy")
+app.build(default=True)
+app.configure()
+app.deploy()

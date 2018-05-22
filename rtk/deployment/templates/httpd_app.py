@@ -5,8 +5,9 @@ config = '''
     WSGIDaemonProcess wsgi-djangostack processes=2 threads=15 display-name=%{GROUP}
 </IfDefine>
 
-Alias /static "{path}/{app}/RTKWebApp/static"
+    Alias {app}/static "{path}/{app}/RTKWebApp/static"
     WSGIScriptAlias /{app} "{path}/{app}/RTKWebApp/wsgi.py"
+    
     <Directory "{path}/{app}/RTKWebApp/">
         WSGIProcessGroup wsgi-djangostack
         WSGIApplicationGroup %{GLOBAL}

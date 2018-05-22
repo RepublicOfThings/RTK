@@ -6,41 +6,7 @@ import json
 import re
 import os.path
 import os
-import subprocess
 import shutil
-
-
-class RTKApp(object):
-    def __init__(self, name):
-        self.name = name
-
-    def authorise(self, permissions="777"):
-        if self.status == 3:
-            subprocess.call(["chmod", permissions, self.django_path])
-
-    def restart(self):
-        if self.status == 3:
-            subprocess.call(["bash", self._config["apache"]["ctlscript"], "restart"])
-
-    @property
-    def status(self):
-        out = 0
-        if os.path.exists(os.path.join(".rtk_deployment", self.name, "app", "settings.py")):
-            out = 1
-        if os.path.exists(os.path.join(".rtk_deployment", self.name, "config", "deployment.json")):
-            out = 2
-        if out == 2:
-            if os.path.exists(self.django_path):
-                out = 3
-        return out
-
-    @property
-    def django_path(self):
-        return os.path.join(self._config["app"]["path"], self.name)
-
-    @property
-    def _config(self):
-        return json.load(open(os.path.join(".rtk_deployment", self.name, "config", "deployment.json")))
 
 
 class RTKWebDeployment(object):
@@ -202,7 +168,7 @@ class RTKWebDeployment(object):
             data = ""
             for statement in open(bitnami_config):  # this isn't robust: will miss statements without linebreaks.
                 if statement == include_statement:
-                    return
+                    return None
                 elif statement.strip() == "\n":
                     pass
                 else:
