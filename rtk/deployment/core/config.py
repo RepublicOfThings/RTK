@@ -95,13 +95,14 @@ class RTKAppConfig(object):
                 settings_file.write(app_settings)
                 settings_file.close()
 
-    def settings(self, key_pattern=r'__SECRET_KEY__'):
+    def settings(self, key_pattern=r'{__SECRET_KEY__}'):
         settings_path = os.path.join(self.app.django_path, self.app.project, "settings.py")
         with open(settings_path, "r") as settings:
             content = settings.read()
             settings.close()
             if re.search(key_pattern, content):
                 content = re.sub(key_pattern, keys.generate_secret(), content)
+                content = re.sub("r{__PROJECT__}", keys.generate_secret(), content)
                 if self.app.dummy:
                     print("DummyCommand: Write to '{0}''".format(settings_path))
                     print("DummyCommand: Dumping... \n {0}".format(content))
