@@ -1,36 +1,11 @@
-from rtk.deployment import RTKWebDeployment, RTKApp
-import argparse
 import logging
-import getpass
+import argparse
 import os
-
-
-def _is_inited(name):
-    if os.path.exists(".rtk_deployment/{name}/app/settings.py".format(name=name)):
-        return True
-    else:
-        return False
-
+import warnings
+from rtk.deployment import RTKApp
 
 def _apps():
     return os.listdir(".rtk_deployment/")
-
-
-def _init_app(args, logger):
-    logger.info("Preparing your new app...")
-    if args.name is not None:
-        app_name = args.name
-    else:
-        app_name = input("App Name:")
-
-    d = RTKWebDeployment(app_name)
-    if input("Configure splunk now? y/n").strip().lower() == "y":
-        splunk_username = input("Splunk username:")
-        splunk_pwd = getpass.getpass("Splunk password:")
-        d.initialise(splunk_user=splunk_username, splunk_password=splunk_pwd, use_defaults=args.defaults)
-    else:
-        d.initialise(use_defaults=args.defaults)
-    logger.info("Prepared your new app for deployment.")
 
 
 def _select_app():
@@ -45,81 +20,69 @@ def _select_app():
         print("No such app, try again ({0}/3 attempts)...")
         count += 1
         if count > 3:
-            logger.info("Aborted deployment.")
+            logger.info("Too many retries. Aborted deployment.")
             return None
 
     return selection
 
 
-def _deploy_app(args, logger):
-    selection = None
-    logger.info("Preparing for deployment...")
-    if args.name is None:
-        apps = _apps()
-        if len(apps) == 0:
-            init = input("No apps are available. Initialise a new one? y/n").strip().lower()
-            if init == "y":
-                _init_app(args, logger)
-            else:
-                print("Please initialise an app before attempting to re-deploy. Use the 'init' command.")
-                return
-        elif len(apps) == 1:
-            default = input("Deploy '{0}'? y/n".format(apps[0])).strip().lower()
-            if default == "y":
-                selection = apps[0]
-            else:
-                selection = _select_app()
+def _add_app(name, dummy=False):
+    if not name.islower():
+        warnings.warn("All app names must be in lower case.")
+    name = name.lower()
+    if name in _apps():
+        logger.error("App name '{0}' already in user -- specify a unique name and try again.".format(name))
+        raise ValueError("Non-unique app ID: '{0}'.".format(name))
+    else:
+        app = RTKApp(name)
+    return app
+
+
+def add(name, dummy=False, default=True):
+    if name is not None:
+        app = _add_app(name, dummy)
+    else:
+        app = _add_app(input("App name: "), dummy)
+    app.build(default=default)
+    app.configure()
+
+
+def activate(name, dummy=False):
+    if name is not None:
+        app = RTKApp(name)
+    else:
+        selection = _select_app()
+        if selection is not None:
+            app = RTKApp(name)
         else:
-            selection = _select_app()
+            return None
 
-    else:
-        selection = args.name
-        if selection not in _apps():
-            print("The provided app name '{0}' is not available for installation.".format(selection))
-            if input("Do you want to select another app? y/n").strip().lower() == "y":
-                selection = _select_app()
-            else:
-                logger.info("Aborted deployment.")
-
-    if selection is not None:
-        d = RTKWebDeployment(selection)
-        d.prepare()
-        logger.info("Deployment configuration ready, beginning deployment...")
-        d.create()
-    else:
-        logger.error("Invalid app selected for deployment.")
-        logger.info("Aborted deployment.")
+    app.deploy()
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--prepare", "-p", help="Prepare an app for deployment: write config files and other resources.")
-parser.add_argument("--create", "-c", help="Create and configure a target app.")
-parser.add_argument("--destroy", "-rm", help="Destroy (permanently delete) an app.")
-parser.add_argument("--init", "-i", help="Initialise a deployment (create new settings directory & file).")
-parser.add_argument("--defaults", "-def", help="Use default configuration (taken from MCA app).", default=True)
-parser.add_argument("--dummy", help="Execute a dummy deployment (don't overwrite Apache files).", default=False)
-parser.add_argument("--deploy", "-d", help="Execute deployment steps (prepare->create).")
-
 parser.add_argument("command")
-parser.add_argument("--name")
+parser.add_argument("--target")
+parser.add_argument("--dummy", default=True)
+
 
 if __name__ == "__main__":
     args = parser.parse_args()
     logger = logging.getLogger("RTKDeploy")
     logging.basicConfig(level=logging.DEBUG)
 
-    if args.command == "new":
-        _init_app(args, logger)
+    if args.command == "add":
+        add(args.target, args.dummy)
 
-    elif args.command == "app":
-        _deploy_app(args, logger)
+    elif args.command == "activate":
+        activate(args.target, args.dummy)
 
-    elif args.command == "makelive":
-        if args.name is None:
-            selection = _select_app()
-        else:
-            selection = args.name
+    elif args.command == "deactivate":
+        pass
 
-        app = RTKApp(selection)
-        app.authorise()
-        app.restart()
+    elif args.command == "remove":
+        pass
+
+    else:
+        logger.error("Unknown command '{0}'.".format(args.command))
+

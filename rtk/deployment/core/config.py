@@ -131,7 +131,7 @@ class RTKAppConfig(object):
         if self.app.dummy:
             print("DummyCommand: Update bitnami-apps-prefix.conf")
             print("DummyCommand: Add {0}".format(include_statement))
-            return include_statement
+            return None
         else:
             data = ""
             dlog.info("Loading Apache data from '{0}'...".format(prefix_file))

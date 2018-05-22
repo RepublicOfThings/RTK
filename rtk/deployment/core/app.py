@@ -54,13 +54,13 @@ class RTKApp(object):
         pass
 
     def authorise(self, permissions="777"):
-        if self.status == READY:
+        if self.status >= READY:
             dlog.info("Changing access permissions for '{0}' to '{1}'...".format(self.django_path, permissions))
             subprocess.call(["chmod", permissions, self.django_path])
             dlog.info("Access permissions changed.")
 
     def restart(self):
-        if self.status == READY:
+        if self.status >= READY:
             dlog.info("Restarting apache with '{0}'...".format(self.deployment["apache"]["ctlscript"]))
             subprocess.call(["bash", self.deployment["apache"]["ctlscript"], "restart"])
             dlog.info("Restart complete.")
