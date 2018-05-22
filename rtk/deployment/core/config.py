@@ -62,16 +62,15 @@ class RTKAppConfig(object):
         with open(wsgi_path, "r") as wsgi:
             content = wsgi.read()
             wsgi.close()
-            if re.search("{app_name}", content):
-                content = re.sub("{app_name}", self.app.project, content)
-                content = re.sub("{project}", self.app.name, content)
-                if self.app.dummy:
-                    print("DummyCommand: Write to '{0}''".format(wsgi_path))
-                    print("DummyCommand: Dumping... \n {0}".format(content))
-                else:
-                    with open(wsgi_path, "w") as wsgi:
-                        wsgi.write(content)
-                        wsgi.close()
+            content = re.sub("{app_name}", self.app.project, content)
+            content = re.sub("{project}", self.app.name, content)
+            if self.app.dummy:
+                print("DummyCommand: Write to '{0}''".format(wsgi_path))
+                print("DummyCommand: Dumping... \n {0}".format(content))
+            else:
+                with open(wsgi_path, "w") as wsgi:
+                    wsgi.write(content)
+                    wsgi.close()
 
     def splunk(self):
         splunk = self._splunk

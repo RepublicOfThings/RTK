@@ -8,11 +8,19 @@ python deployer.py create # deployment an RTKWebApp according to the provided co
 
 import logging
 from rtk.deployment import RTKApp
+import re
 
 logging.basicConfig(level=logging.DEBUG)
 
-app = RTKApp("demo", mode="live")
-app.build(default=True)
+content = open("test.py").read()
+print(content)
+content = re.sub("{app_name}", "DemoWebApp", content)
+print(content)
+content = re.sub("{project}", "demo", content)
+print(content)
+
+# app = RTKApp("demo", mode="live")
+# app.build(default=True)
 # print(app.project)
 
 
