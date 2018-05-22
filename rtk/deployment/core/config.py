@@ -63,8 +63,8 @@ class RTKAppConfig(object):
             content = wsgi.read()
             wsgi.close()
             if re.search("{app_name}", content):
-                content = re.sub("{app_name}", self.app.name, content)
-                content = re.sub("{project}", self.app.project, content)
+                content = re.sub("{app_name}", self.app.project, content)
+                content = re.sub("{project}", self.app.name, content)
                 if self.app.dummy:
                     print("DummyCommand: Write to '{0}''".format(wsgi_path))
                     print("DummyCommand: Dumping... \n {0}".format(content))
