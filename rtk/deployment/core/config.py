@@ -58,13 +58,13 @@ class RTKAppConfig(object):
                         current.close()
 
     def _write_wsgi_file(self):
-        wsgi_path = os.path.join(self.app.django_path, self.app.baseproj, "wsgi.py")
+        wsgi_path = os.path.join(self.app.django_path, self.app.project, "wsgi.py")
         with open(wsgi_path, "r") as wsgi:
             content = wsgi.read()
             wsgi.close()
             if re.search("{app_name}", content):
                 content = re.sub("{app_name}", self.app.name, content)
-
+                content = re.sub("{project}", self.app.project, content)
                 if self.app.dummy:
                     print("DummyCommand: Write to '{0}''".format(wsgi_path))
                     print("DummyCommand: Dumping... \n {0}".format(content))
@@ -97,7 +97,7 @@ class RTKAppConfig(object):
                 settings_file.close()
 
     def settings(self, key_pattern=r'__SECRET_KEY__'):
-        settings_path = os.path.join(self.app.django_path, self.app.baseproj, "settings.py")
+        settings_path = os.path.join(self.app.django_path, self.app.project, "settings.py")
         with open(settings_path, "r") as settings:
             content = settings.read()
             settings.close()
@@ -128,10 +128,11 @@ class RTKAppConfig(object):
                 elif statement.strip() == "\n":
                     pass
                 else:
-                    data += statement
+                    data += statement + "\n"
 
             data += include_statement
             data = "\n".join(list(set([ll.rstrip() for ll in data.splitlines() if ll.strip()])))
+            print(data)
             return data
 
     def __getattr__(self, item):

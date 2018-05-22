@@ -13,5 +13,8 @@ logging.basicConfig(level=logging.DEBUG)
 
 app = RTKApp("demo", mode="live")
 app.build(default=True)
-app.configure()
-app.deploy()
+# print(app.project)
+
+
+# app.configure()
+# app.deploy()

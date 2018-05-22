@@ -68,6 +68,7 @@ class RTKAppBuilder(object):
         config = self.app.deployment
         app = httpd_app_template.config.format(path=config['app']['path'],
                                                app=config['app']['name'],
+                                               project=self.app.project,
                                                GLOBAL="GLOBAL",
                                                GROUP="GROUP")
 

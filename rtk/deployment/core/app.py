@@ -64,6 +64,12 @@ class RTKApp(object):
             dlog.info("Restart complete.")
 
     @property
+    def project(self):
+        initial = self.name[0].upper()
+        initial += self.name[1:]
+        return "{0}WebApp".format(initial)
+
+    @property
     def build(self):
         return RTKAppBuilder(self)
 
