@@ -30,6 +30,8 @@ class RTKApp(object):
         if not self.dummy:
             dlog.info("Cloning from {0} to {1}.".format(self.github_url, self.django_path))
             os.system("git clone {0} {1}".format(self.github_url, self.django_path))
+            os.system("mv {0} {1}".format(os.path.join(self.django_path, self.baseproj),
+                                          os.path.join(self.django_path, self.project)))
             dlog.info("Done cloning.")
         else:
             print("DummyCommand: git clone {0} {1}".format(self.github_url, self.django_path))

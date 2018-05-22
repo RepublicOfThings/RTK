@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8fd4d2f2-f118-49dd-be25-a0dfa7c5319e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtk/deployment/core/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/deployment/core/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rtk/deployment/core/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/deployment/core/app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rtk/deployment/core/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="133" column="96" selection-start-line="133" selection-start-column="96" selection-end-line="133" selection-end-column="96" />
+            <state relative-caret-position="455">
+              <caret line="65" column="70" lean-forward="true" selection-start-line="65" selection-start-column="70" selection-end-line="65" selection-end-column="70" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -63,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rtk/deployment/core/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="59" column="22" lean-forward="true" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+            <state relative-caret-position="320">
+              <caret line="31" column="84" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -189,10 +189,10 @@
         <option value="$PROJECT_DIR$/rtk/utils/keys.py" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/rtk/deployment/templates/httpd_app.py" />
-        <option value="$PROJECT_DIR$/rtk/deployment/core/app.py" />
         <option value="$PROJECT_DIR$/rtk/deployment/core/gen.py" />
         <option value="$PROJECT_DIR$/sandbox.py" />
         <option value="$PROJECT_DIR$/rtk/deployment/core/config.py" />
+        <option value="$PROJECT_DIR$/rtk/deployment/core/app.py" />
       </list>
     </option>
   </component>
@@ -611,7 +611,21 @@
       <option name="project" value="LOCAL" />
       <updated>1526968397664</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="0.0.4d">
+      <created>1526968408713</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1526968408713</updated>
+    </task>
+    <task id="LOCAL-00036" summary="0.0.4d">
+      <created>1526968472034</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1526968472034</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -983,22 +997,22 @@
     <entry file="file://$PROJECT_DIR$/.rtk_deployment/demo/config/httpd-app-template.conf">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/app.py">
+    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="59" column="22" lean-forward="true" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+        <state relative-caret-position="455">
+          <caret line="65" column="70" lean-forward="true" selection-start-line="65" selection-start-column="70" selection-end-line="65" selection-end-column="70" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/config.py">
+    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="133" column="96" selection-start-line="133" selection-start-column="96" selection-end-line="133" selection-end-column="96" />
+        <state relative-caret-position="320">
+          <caret line="31" column="84" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
