@@ -16,30 +16,37 @@ class RTKAppConfig(object):
 
     def __call__(self):
         if self.app.status == DEPLOYED:
+            dlog.info("Configuring your new app...")
             self.wsgi()
             self.settings()
             self.apache()
             self.splunk()
+            dlog.info("Configuration complete...")
         else:
             dlog.error("Cannot deploy app - make sure to build your app settings and clone the app first.")
 
     def apache(self):
+        dlog.info("Configuring Apache...")
         config = self._deployment
         apache = self._apache
         bitnami_prefix_path = os.path.join(apache["path"], "bitnami-apps-prefix.conf")
         new_app_include = apache["template"].format(path=config["app"]["path"],
                                                     app=config["app"]["name"])
+
         data = self._update_prefix_conf(bitnami_prefix_path, new_app_include)
 
         if self.app.dummy:
             print("DummyCommand: Access {0}.".format(bitnami_prefix_path))
             print("DummyCommand: Write \n {0}".format(data))
         else:
+            dlog.info("Writing Apache config to '{0}'...".format(bitnami_prefix_path))
             with open(bitnami_prefix_path, "w") as bitnami_file:
                 bitnami_file.write(data)
+        dlog.info("Apache configured.")
 
     def wsgi(self):
         wsgi = self._wsgi
+        dlog.info("Configuring WSGI...")
         self._write_wsgi_conf(wsgi)
         self._write_wsgi_file()
 
@@ -47,6 +54,7 @@ class RTKAppConfig(object):
         conf_path = os.path.join(self.app.django_path, "conf")
         for config_file, template_file in wsgi["conf"].items():
             path = os.path.join(conf_path, config_file)
+            dlog.info("Writing WSGI to '{0}'...".format(path))
             with open(os.path.join(self.app.deployment_path, template_file)) as current:
                 if self.app.dummy:
                     print("DummyCommand: Write '{0}' to '{1}'".format(template_file, path))
@@ -56,6 +64,7 @@ class RTKAppConfig(object):
                         target.write(current.read())
                         target.close()
                         current.close()
+            dlog.info("Configured WSGI.")
 
     def _write_wsgi_file(self):
         wsgi_path = os.path.join(self.app.django_path, self.app.project, "wsgi.py")
