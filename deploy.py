@@ -4,6 +4,21 @@ import os
 import warnings
 from rtk.deployment import RTKApp
 
+
+def selector(func):
+    def wrapper(name, **kwargs):
+        if name is not None:
+            app = RTKApp(name, **kwargs)
+        else:
+            selection = _select_app()
+            if selection is not None:
+                app = RTKApp(selection, **kwargs)
+            else:
+                return None
+        return func(app, **kwargs)
+    return wrapper
+
+
 def _apps():
     return os.listdir(".rtk_deployment/")
 
@@ -31,7 +46,7 @@ def _add_app(name, dummy=False):
         warnings.warn("All app names must be in lower case.")
     name = name.lower()
     if name in _apps():
-        logger.error("App name '{0}' already in user -- specify a unique name and try again.".format(name))
+        logger.error("App name '{0}' already in installed apps -- specify a unique name and try again.".format(name))
         raise ValueError("Non-unique app ID: '{0}'.".format(name))
     else:
         app = RTKApp(name)
@@ -46,17 +61,16 @@ def add(name, dummy=False, default=True):
     app.build(default=default)
 
 
-def activate(name, dummy=False):
-    if name is not None:
-        app = RTKApp(name)
-    else:
-        selection = _select_app()
-        if selection is not None:
-            app = RTKApp(selection)
-        else:
-            return None
 
+@selector
+def activate(app):
     app.deploy()
+
+
+@selector
+def remove(app):
+    app.delete()
+
 
 
 parser = argparse.ArgumentParser()
@@ -80,7 +94,10 @@ if __name__ == "__main__":
         pass
 
     elif args.command == "remove":
-        pass
+        remove(args.target)
+
+    # elif args.command == "test":
+    #     test(args.target, mode=args.dummy)
 
     else:
         logger.error("Unknown command '{0}'.".format(args.command))
