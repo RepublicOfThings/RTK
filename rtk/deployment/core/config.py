@@ -40,8 +40,9 @@ class RTKAppConfig(object):
             print("DummyCommand: Write \n {0}".format(data))
         else:
             dlog.info("Writing Apache config to '{0}'...".format(bitnami_prefix_path))
-            with open(bitnami_prefix_path, "w") as bitnami_file:
-                bitnami_file.write(data)
+            if data is not None:
+                with open(bitnami_prefix_path, "w") as bitnami_file:
+                    bitnami_file.write(data)
         dlog.info("Apache configured.")
 
     def wsgi(self):
