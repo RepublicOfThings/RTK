@@ -2,6 +2,7 @@ import logging
 import argparse
 import os
 import warnings
+import subprocess
 from rtk.deployment import RTKApp
 
 
@@ -61,6 +62,10 @@ def add(name, dummy=False, default=True):
     app.build(default=default)
 
 
+@selector
+def update(app):
+    app.update()
+
 
 @selector
 def activate(app):
@@ -70,7 +75,8 @@ def activate(app):
 @selector
 def remove(app):
     app.delete()
-    app.restart()
+    # app.restart()
+    # subprocess.call(["bash", "./djangostack-2.0.3-0", "restart"])
 
 @selector
 def deactivate(app):
@@ -79,12 +85,13 @@ def deactivate(app):
 
 
 @selector
-def deactivate(app):
+def reactivate(app):
     app.reactivate()
     app.restart()
 
 
 parser = argparse.ArgumentParser()
+
 parser.add_argument("command")
 parser.add_argument("--target")
 parser.add_argument("--dummy", default=True)
@@ -105,10 +112,13 @@ if __name__ == "__main__":
         deactivate(args.target)
 
     elif args.command == "reactivate":
-        deactivate(args.target)
+        reactivate(args.target)
 
     elif args.command == "remove":
         remove(args.target)
+
+    elif args.command == "update":
+        update(args.target)
 
     elif args.command == "available":
         for app in _apps():

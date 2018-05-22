@@ -77,6 +77,10 @@ class RTKApp(object):
         subprocess.call(["bash", self.deployment["apache"]["ctlscript"], "restart"])
         dlog.info("Restart complete.")
 
+    def update(self):
+        self.build.deployment()
+        self.build.conf()
+
     @property
     def project(self):
         initial = self.name[0].upper()
