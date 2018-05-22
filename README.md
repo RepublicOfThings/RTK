@@ -26,53 +26,76 @@ sudo python setup.py install
 (If starting from scratch)
 0. Download and install RTK2 from GitHub (see above).
 
-1. Copy the ```deploy.py``` script into the ```republicuser``` directory.
+1. Copy the ```deploy.py``` script into the ```republicuser``` directory (if it isn't already there!).
 
 2. Prepare a new app configuration:
 
 ```
-python deploy.py new
+python deploy.py add
 ```
 
 This will prompt you to create a new app settings file in the ```.rtk_deployment/{app_name}/app``` folder.
 You should review this ```settings.py``` file before continuing. For additional arguments use the ```--help`` flag.
 
-3. Next, deploy the app. This can be achieved with the following:
+If you make changes to the ```settings.py``` app, make sure to run the following command **before** activating your app:
 
 ```
-python deploy.py app
+python deploy.py update
 ```
 
+Note that if you deploy before updating the configuration, the changes won't be propagated to your app when it's deployed.
+
+If you make a mistake and deploy, or change your mind about the configuration after deployment, use the following:
+
+```
+python deploy.py remove
+```
+
+Select your target app, and when prompted to delete your app configuration (the second y/n option), select no. Then use ```update``` and redeploy your app.
+
+3. Next, activate the app. This will clone the app from GitHub, write the code for your new app, and then restart the Apache server. This can be achieved with the following:
+
+```
+python deploy.py activate
+```
+
+4. Deactivating an app can also be achieved. This will remove the app from the apache server but preserve the django app in the ```django_projects``` directory. This can be done with:
+
+```
+python deploy.py deactivate
+```
+
+5. A deactivated app can be reactivated (restored to apache server) with:
+
+```
+python deploy.py reactivate
+```
+
+6. Finally, an app can be deleted with the following:
+
+```
+python deploy.py remove
+```
+
+### Additional Notes
+
+* Only apps installed in the ```.rtk_deployment``` directory can be manipulated with the ```deploy.py``` script. Make sure to add and remove apps only with this script.
+* The RTKApp object can be used to generically create apps in pure Python code. Feel free to experiment!
 
 ### Example - DemoApp
 
-Initialise a new app (note that the optional --name flag avoids command line prompt for a name).
+Initialise a new app (note that the optional --target flag avoids command line prompt for a name).
 ```
-python deploy.py new
-```
-
-This will produce the following interaction:
-
-```
-INFO:RTKDeploy:Initialising a new app...
-App Name:DemoApp
-Configure splunk now? y/ny
-Splunk username:republic
-Splunk password:
-INFO:RTKDeploy:Prepared your new app for deployment.
+python deploy.py add --target=demo_app
 ```
 
-Next up, check the settings file at `.rtk_deployment/DemoApp/app/settings.py`, then its time to deploy! Given there is only one app prepared, you will see the following:
+Edit the ```.rtk_deployment/demo_app/app/settings.py``` file to make it point to your target splunk dashes etc. Don't forget the quotation marks when changing stuff!
+
+Activate the app as follows:
 
 ```
-python deploy app
-INFO:RTKDeploy:Preparing for deployment...
-Deploy 'DemoApp'? y/n y
-INFO:RTKWebDeployment:Preparing your app configuration file...
-INFO:RTKWebDeployment:App configuration is ready.
-INFO:RTKWebDeployment:Preparing your apache configuration files...
-INFO:RTKWebDeployment:Writing httpd-app-template...
-INFO:RTKWebDeployment:Writing httpd-prefix-template...
-INFO:RTKWebDeployment:Apache configuration templates are ready.
-
+python deploy.py activate --target=demo_app
 ```
+
+Now navigate to ```www.smeiling.co.uk:8080/demo_app``` -- it should be live!
+

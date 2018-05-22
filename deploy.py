@@ -106,7 +106,7 @@ if __name__ == "__main__":
         add(args.target, args.dummy)
 
     elif args.command == "activate":
-        activate(args.target, args.dummy)
+        activate(args.target, mode=args.dummy)
 
     elif args.command == "deactivate":
         deactivate(args.target)
