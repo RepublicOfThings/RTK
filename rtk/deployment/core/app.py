@@ -58,6 +58,13 @@ class RTKApp(object):
             shutil.rmtree(self.path)
         dlog.info("The app '{0}' has been removed.".format(self.name))
 
+    def deactivate(self):
+        self.configure.clean()
+        dlog.info("The app '{0}' has been deactivated.".format(self.name))
+
+    def reactivate(self):
+        self.configure.apache()
+
     def authorise(self, permissions="777"):
         if self.status >= READY:
             dlog.info("Changing access permissions for '{0}' to '{1}'...".format(self.django_path, permissions))
@@ -65,10 +72,9 @@ class RTKApp(object):
             dlog.info("Access permissions changed.")
 
     def restart(self):
-        if self.status >= READY:
-            dlog.info("Restarting apache with '{0}'...".format(self.deployment["apache"]["ctlscript"]))
-            subprocess.call(["bash", self.deployment["apache"]["ctlscript"], "restart"])
-            dlog.info("Restart complete.")
+        dlog.info("Restarting apache with '{0}'...".format(self.deployment["apache"]["ctlscript"]))
+        subprocess.call(["bash", self.deployment["apache"]["ctlscript"], "restart"])
+        dlog.info("Restart complete.")
 
     @property
     def project(self):

@@ -68,6 +68,9 @@ class RTKAppConfig(object):
 
         data = "\n".join(list(set([ll.rstrip() for ll in data.splitlines() if ll.strip()])))
         dlog.info("Writing Apache data '{0}'...".format(data))
+        if data is not None:
+            with open(bitnami_prefix_path, "w") as bitnami_file:
+                bitnami_file.write(data)
 
     def _write_wsgi_conf(self, wsgi: dict) -> None:
         conf_path = os.path.join(self.app.django_path, "conf")

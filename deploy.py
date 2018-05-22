@@ -70,7 +70,18 @@ def activate(app):
 @selector
 def remove(app):
     app.delete()
+    app.restart()
 
+@selector
+def deactivate(app):
+    app.deactivate()
+    app.restart()
+
+
+@selector
+def deactivate(app):
+    app.reactivate()
+    app.restart()
 
 
 parser = argparse.ArgumentParser()
@@ -91,10 +102,17 @@ if __name__ == "__main__":
         activate(args.target, args.dummy)
 
     elif args.command == "deactivate":
-        pass
+        deactivate(args.target)
+
+    elif args.command == "reactivate":
+        deactivate(args.target)
 
     elif args.command == "remove":
         remove(args.target)
+
+    elif args.command == "available":
+        for app in _apps():
+            print(app)
 
     # elif args.command == "test":
     #     test(args.target, mode=args.dummy)
