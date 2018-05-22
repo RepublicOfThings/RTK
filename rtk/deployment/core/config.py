@@ -132,7 +132,6 @@ class RTKAppConfig(object):
 
             data += include_statement
             data = "\n".join(list(set([ll.rstrip() for ll in data.splitlines() if ll.strip()])))
-            print(data)
             return data
 
     def __getattr__(self, item):
