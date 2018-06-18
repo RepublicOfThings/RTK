@@ -131,6 +131,7 @@ class RTKAppConfig(object):
 
             content = re.sub(r"{__SECRET_KEY__}", keys.generate_secret(), content)
             content = re.sub(r"{__PROJECT__}", self.app.project, content)
+            content = re.sub(r"{__WEBAPP__}", self.app.webapp, content)
             if self.app.dummy:
                 print("DummyCommand: Write to '{0}''".format(settings_path))
                 print("DummyCommand: Dumping... \n {0}".format(content))
@@ -139,6 +140,46 @@ class RTKAppConfig(object):
                     updated.write(content)
                     updated.close()
             dlog.info("Configured app settings.")
+
+        apps_path = os.path.join(self.app.django_path, self.app.webapp, "apps.py")
+        with open(apps_path, "r") as apps:
+            content = apps.read()
+            apps.close()
+
+            content = re.sub(r"{__WEBAPP__}", self.app.webapp, content)
+            if self.app.dummy:
+                print("DummyCommand: Write to '{0}''".format(apps_path))
+                print("DummyCommand: Dumping... \n {0}".format(content))
+            else:
+                with open(apps_path, "w") as updated:
+                    updated.write(content)
+                    updated.close()
+
+        urls_path = os.path.join(self.app.django_path, self.app.webapp, "urls.py")
+        with open(urls_path, "r") as urls:
+            content = urls.read()
+            urls.close()
+            content = re.sub(r"{__WEBAPP__}", self.app.webapp, content)
+            if self.app.dummy:
+                print("DummyCommand: Write to '{0}''".format(urls_path))
+                print("DummyCommand: Dumping... \n {0}".format(content))
+            else:
+                with open(urls_path, "w") as updated:
+                    updated.write(content)
+                    updated.close()
+
+        views_path = os.path.join(self.app.django_path, self.app.webapp, "views.py")
+        with open(views_path, "r") as views:
+            content = views.read()
+            views.close()
+            content = re.sub(r"{__WEBAPP__}", self.app.webapp, content)
+            if self.app.dummy:
+                print("DummyCommand: Write to '{0}''".format(views_path))
+                print("DummyCommand: Dumping... \n {0}".format(content))
+            else:
+                with open(views_path, "w") as updated:
+                    updated.write(content)
+                    updated.close()
 
     @property
     def _deployment(self):

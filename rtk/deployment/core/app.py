@@ -30,6 +30,8 @@ class RTKApp(object):
         if not self.dummy:
             dlog.info("Cloning from {0} to {1}.".format(self.github_url, self.django_path))
             os.system("git clone {0} {1}".format(self.github_url, self.django_path))
+            os.system("mv {0} {1}".format(os.path.join(self.django_path, self.baseproj, self.baseapp),
+                                          os.path.join(self.django_path, self.baseproj, "{0}_{1}".format(self.name, self.baseapp))))
             os.system("mv {0} {1}".format(os.path.join(self.django_path, self.baseproj),
                                           os.path.join(self.django_path, self.project)))
             dlog.info("Done cloning.")
@@ -86,6 +88,12 @@ class RTKApp(object):
         initial = self.name[0].upper()
         initial += self.name[1:]
         return "{0}WebApp".format(initial)
+
+    @property
+    def webapp(self):
+        initial = self.name[0].upper()
+        initial += self.name[1:]
+        return "{0}_{1}".format(initial, self.baseapp)
 
     @property
     def build(self):

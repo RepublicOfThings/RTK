@@ -33,7 +33,7 @@ class RTKAppBuilder(object):
 
         settings_path = os.path.join(path, "settings.py")
 
-        dlog.info("Witing settings '{0}'...".format(settings_path))
+        dlog.info("Writing settings '{0}'...".format(settings_path))
 
         with open(settings_path, "w") as settings_file:
             settings_file.write(data)
