@@ -112,7 +112,7 @@ class RTKAppConfig(object):
                                                  url=splunk["url"]
                                                  )
 
-        settings_path = os.path.join(self.app.django_path, self.app.baseapp, "app_settings.py")
+        settings_path = os.path.join(self.app.django_path, self.app.webapp, "app_settings.py")
 
         if self.app.dummy:
             print("DummyCommand: Write splunk settings to '{0}'.".format(settings_path))
