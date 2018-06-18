@@ -7,7 +7,7 @@ from ..templates import (defaults as default_settings,
                          deployment as deployment_template,
                          httpd_app as httpd_app_template,
                          httpd_prefix as httpd_prefix_template)
-
+import uuid
 from .utils import configure_template
 
 
@@ -69,7 +69,8 @@ class RTKAppBuilder(object):
         app = httpd_app_template.config.format(path=config['app']['path'],
                                                app=config['app']['name'],
                                                project=self.app.project,
-                                               GLOBAL="GLOBAL",
+                                               thread=str(uuid.uuid4()).replace("-", ""),
+                                               GLOBAL="RESOURCE",
                                                GROUP="GROUP")
 
         app_path = os.path.join(self.app.basedir, self.app.name, "config", "httpd-app-template.conf")

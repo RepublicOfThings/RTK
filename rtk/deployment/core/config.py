@@ -92,7 +92,6 @@ class RTKAppConfig(object):
             wsgi.close()
             content = re.sub("{app_name}", self.app.project, content)
             content = re.sub("{project}", self.app.name, content)
-            content = re.sub("{thread}", str(uuid.uuid4()), content)
             if self.app.dummy:
                 print("DummyCommand: Write to '{0}''".format(wsgi_path))
                 print("DummyCommand: Dumping... \n {0}".format(content))

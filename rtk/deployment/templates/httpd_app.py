@@ -10,7 +10,7 @@ config = '''
     
     <Directory "{path}/{app}/{project}/">
         WSGIProcessGroup wsgi-djangostack-{thread}
-        WSGIApplicationGroup %{RESOURCE}
+        WSGIApplicationGroup %{GLOBAL}
     <IfVersion < 2.3 >
         Order allow,deny
         Allow from all
