@@ -141,7 +141,7 @@ class RTKAppConfig(object):
                     updated.close()
             dlog.info("Configured app settings.")
 
-        manage_path = os.path.join(self.app.django_path, self.app.name, "manage.py")
+        manage_path = os.path.join(self.app.django_path, "manage.py")
         with open(manage_path, "r") as manage:
             content = manage.read()
             manage.close()
