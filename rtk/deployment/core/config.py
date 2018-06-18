@@ -141,6 +141,22 @@ class RTKAppConfig(object):
                     updated.close()
             dlog.info("Configured app settings.")
 
+        manage_path = os.path.join(self.app.django_path, self.app.name, "manage.py")
+        with open(manage_path, "r") as manage:
+            content = manage.read()
+            manage.close()
+
+            content = re.sub(r"{__PROJECT__}", self.app.project, content)
+
+            if self.app.dummy:
+                print("DummyCommand: Write to '{0}''".format(manage_path))
+                print("DummyCommand: Dumping... \n {0}".format(content))
+            else:
+                with open(manage_path, "w") as updated:
+                    updated.write(content)
+                    updated.close()
+            dlog.info("Configured app settings.")
+
         proj_urls_path = os.path.join(self.app.django_path, self.app.project, "urls.py")
         with open(proj_urls_path, "r") as proj_urls:
             content = proj_urls.read()

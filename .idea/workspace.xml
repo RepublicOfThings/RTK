@@ -42,8 +42,8 @@
       <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rtk/deployment/core/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="150" column="75" selection-start-line="150" selection-start-column="75" selection-end-line="150" selection-end-column="75" />
+            <state relative-caret-position="398">
+              <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -354,13 +354,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525525977457</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Added documentation.">
-      <created>1526578407404</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1526578407404</updated>
     </task>
     <task id="LOCAL-00014" summary="Changed command-line app. Stream-lined deployment.">
       <created>1526742065474</created>
@@ -698,7 +691,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529343354996</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="0.0.6 Fix for shared namespace bug. Hotfix (d).">
+      <created>1529343943631</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1529343943631</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -762,7 +762,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Completed Alpha -- hotfix (3)." />
     <MESSAGE value="Completed Alpha -- hotfix (4)." />
     <MESSAGE value="Completed Alpha -- hotfix (5)." />
     <MESSAGE value="Completed Alpha -- hotfix (6)." />
@@ -787,7 +786,8 @@
     <MESSAGE value="0.0.6 Fix for shared namespace bug. Hotfix (a)." />
     <MESSAGE value="0.0.6 Fix for shared namespace bug. Hotfix (b)." />
     <MESSAGE value="0.0.6 Fix for shared namespace bug. Hotfix (c)." />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.6 Fix for shared namespace bug. Hotfix (c)." />
+    <MESSAGE value="0.0.6 Fix for shared namespace bug. Hotfix (d)." />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.6 Fix for shared namespace bug. Hotfix (d)." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/rtk/deployment/core/app.py">
@@ -1119,8 +1119,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rtk/deployment/core/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="150" column="75" selection-start-line="150" selection-start-column="75" selection-end-line="150" selection-end-column="75" />
+        <state relative-caret-position="398">
+          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
