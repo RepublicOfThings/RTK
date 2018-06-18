@@ -62,6 +62,11 @@ def add(name, dummy=False, default=True):
     app.build(default=default)
 
 
+# @selector
+# def copy(app):
+#     app.copy()
+
+
 @selector
 def update(app):
     app.update()
@@ -119,6 +124,9 @@ if __name__ == "__main__":
 
     elif args.command == "update":
         update(args.target)
+
+    # elif args.command == "copy":
+    #     copy(args.target)
 
     elif args.command == "available":
         for app in _apps():

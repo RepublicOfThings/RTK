@@ -83,6 +83,9 @@ class RTKApp(object):
         self.build.deployment()
         self.build.conf()
 
+    def copy(self):
+        pass
+
     @property
     def project(self):
         initial = self.name[0].upper()
