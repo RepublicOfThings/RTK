@@ -70,7 +70,7 @@ class RTKAppBuilder(object):
                                                app=config['app']['name'],
                                                project=self.app.project,
                                                thread=str(uuid.uuid4()).replace("-", ""),
-                                               GLOBAL="RESOURCE",
+                                               GLOBAL="GLOBAL",
                                                GROUP="GROUP")
 
         app_path = os.path.join(self.app.basedir, self.app.name, "config", "httpd-app-template.conf")

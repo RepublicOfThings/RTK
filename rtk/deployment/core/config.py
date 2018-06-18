@@ -234,8 +234,7 @@ class RTKAppConfig(object):
                     data += statement + "\n"
 
             data += include_statement
-            # data = "\n".join(list(set([ll.rstrip() for ll in data.splitlines() if ll.strip()])))
-            data = ""
+            data = "\n".join(list(set([ll.rstrip() for ll in data.splitlines() if ll.strip()])))
             dlog.info("Writing Apache data '{0}'...".format(data))
             return data
 
