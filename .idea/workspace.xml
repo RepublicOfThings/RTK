@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8fd4d2f2-f118-49dd-be25-a0dfa7c5319e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtk/deployment/core/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/deployment/core/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rtk/deployment/core/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/deployment/core/config.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rtk/deployment/core/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="182" lean-forward="true" selection-start-line="182" selection-end-line="182" />
+            <state relative-caret-position="459">
+              <caret line="150" column="75" selection-start-line="150" selection-start-column="75" selection-end-line="150" selection-end-column="75" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -54,7 +54,7 @@
       <file leaf-file-name="gen.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rtk/deployment/core/gen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
+            <state relative-caret-position="10">
               <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -63,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rtk/deployment/core/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="33" column="71" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
+            <state relative-caret-position="-678">
+              <caret line="44" column="43" lean-forward="true" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -127,6 +127,7 @@
       <find>baseprojec</find>
       <find>project</find>
       <find>_update</find>
+      <find>splunk</find>
       <find>baseapp</find>
     </findStrings>
   </component>
@@ -184,9 +185,9 @@
         <option value="$PROJECT_DIR$/deploy.py" />
         <option value="$PROJECT_DIR$/.rtk_deployment/test/app/settings.py" />
         <option value="$PROJECT_DIR$/rtk/deployment/core/gen.py" />
-        <option value="$PROJECT_DIR$/rtk/deployment/core/config.py" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/rtk/deployment/core/app.py" />
+        <option value="$PROJECT_DIR$/rtk/deployment/core/config.py" />
       </list>
     </option>
   </component>
@@ -353,20 +354,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525525977457</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Completed Alpha -- hotfix (6).">
-      <created>1525702694481</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1525702694481</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Completed Alpha -- hotfix (7).">
-      <created>1525702756827</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1525702756827</updated>
     </task>
     <task id="LOCAL-00013" summary="Added documentation.">
       <created>1526578407404</created>
@@ -697,7 +684,21 @@
       <option name="project" value="LOCAL" />
       <updated>1529343117338</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="0.0.6 Fix for shared namespace bug. Hotfix (b).">
+      <created>1529343228278</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1529343228278</updated>
+    </task>
+    <task id="LOCAL-00061" summary="0.0.6 Fix for shared namespace bug. Hotfix (c).">
+      <created>1529343354996</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1529343354996</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -761,8 +762,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Completed Alpha -- added dummy mode." />
-    <MESSAGE value="Completed Alpha -- hotfix." />
     <MESSAGE value="Completed Alpha -- hotfix (3)." />
     <MESSAGE value="Completed Alpha -- hotfix (4)." />
     <MESSAGE value="Completed Alpha -- hotfix (5)." />
@@ -786,7 +785,9 @@
     <MESSAGE value="0.0.5" />
     <MESSAGE value="0.0.6 Fix for shared namespace bug." />
     <MESSAGE value="0.0.6 Fix for shared namespace bug. Hotfix (a)." />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.6 Fix for shared namespace bug. Hotfix (a)." />
+    <MESSAGE value="0.0.6 Fix for shared namespace bug. Hotfix (b)." />
+    <MESSAGE value="0.0.6 Fix for shared namespace bug. Hotfix (c)." />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.6 Fix for shared namespace bug. Hotfix (c)." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/rtk/deployment/core/app.py">
@@ -1079,16 +1080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/gen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1106,10 +1097,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/config.py">
+    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/gen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="182" lean-forward="true" selection-start-line="182" selection-end-line="182" />
+        <state relative-caret-position="10">
+          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -1118,10 +1109,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rtk/deployment/core/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="33" column="71" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
+        <state relative-caret-position="-678">
+          <caret line="44" column="43" lean-forward="true" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="150" column="75" selection-start-line="150" selection-start-column="75" selection-end-line="150" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
