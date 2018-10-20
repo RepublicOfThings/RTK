@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fd4d2f2-f118-49dd-be25-a0dfa7c5319e" name="Default" comment="2.0.1c - (Hotfix) Correction to CityVerve template.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtk/templates/django/TemplateWebApp/settings.py-tpl" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/templates/django/TemplateWebApp/settings.py-tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtk/templates/django/template_app/templates/common/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/templates/django/template_app/templates/common/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtk/templates/django/template_app/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/templates/django/template_app/templates/registration/login.html" afterDir="false" />
+    <list default="true" id="8fd4d2f2-f118-49dd-be25-a0dfa7c5319e" name="Default" comment="2.0.2 - Added a basic authentication layer and user DB.">
+      <change beforePath="$PROJECT_DIR$/rtk/templates/django/template_app/urls.py-tpl" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/templates/django/template_app/urls.py-tpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +42,8 @@
           <entry key="html" value="9" />
           <entry key="in" value="4" />
           <entry key="md" value="1" />
-          <entry key="py" value="68" />
-          <entry key="py-tpl" value="5" />
+          <entry key="py" value="69" />
+          <entry key="py-tpl" value="6" />
           <entry key="rtk-app" value="5" />
           <entry key="sh" value="2" />
           <entry key="txt" value="1" />
@@ -60,8 +57,8 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="9" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="94" />
-          <entry key="Python" value="69" />
+          <entry key="PLAIN_TEXT" value="95" />
+          <entry key="Python" value="70" />
           <entry key="YAML" value="20" />
         </counts>
       </usages-collector>
@@ -74,10 +71,10 @@
           <entry key="html" value="45" />
           <entry key="html-tpl" value="59" />
           <entry key="in" value="157" />
-          <entry key="py" value="9733" />
-          <entry key="py-tpl" value="44" />
+          <entry key="py" value="9734" />
+          <entry key="py-tpl" value="45" />
           <entry key="rtk-app" value="79" />
-          <entry key="txt" value="738" />
+          <entry key="txt" value="789" />
           <entry key="yml" value="27" />
           <entry key="yml-tpl" value="937" />
         </counts>
@@ -85,8 +82,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="45" />
-          <entry key="PLAIN_TEXT" value="2196" />
-          <entry key="Python" value="9733" />
+          <entry key="PLAIN_TEXT" value="2248" />
+          <entry key="Python" value="9734" />
           <entry key="YAML" value="27" />
         </counts>
       </usages-collector>
@@ -109,24 +106,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rtk/bin/rtk-app">
+        <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="67" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="195">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rtk/core/commands.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rtk/templates/django/template_app/urls.py-tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <marker date="1540076331480" expanded="true" signature="248:251" ph="..." />
-                <marker date="1540076331480" expanded="true" signature="249:251" ph="..." />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -147,7 +142,7 @@
         <entry file="file://$PROJECT_DIR$/.rtk_cache/vodafone/echo.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="32">
-              <caret line="17" column="67" lean-forward="true" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+              <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -174,7 +169,7 @@
         <entry file="file://$PROJECT_DIR$/rtk/templates/django/TemplateWebApp/settings.py-tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="742">
-              <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+              <caret line="125" selection-start-line="125" selection-end-line="125" />
             </state>
           </provider>
         </entry>
@@ -183,7 +178,7 @@
         <entry file="file://$PROJECT_DIR$/rtk/templates/django/template_app/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="171" column="47" lean-forward="true" selection-start-line="171" selection-start-column="47" selection-end-line="171" selection-end-column="47" />
+              <caret line="171" column="47" selection-start-line="171" selection-start-column="47" selection-end-line="171" selection-end-column="47" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -191,11 +186,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rtk/templates/django/template_app/templates/common/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="32" column="70" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
+            <state relative-caret-position="397">
+              <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -247,7 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.rtk_deployment/test/app/settings.py" />
         <option value="$PROJECT_DIR$/rtk/deployment/core/app.py" />
         <option value="$PROJECT_DIR$/deploy.py" />
         <option value="$PROJECT_DIR$/rtk/deployment/core/config.py" />
@@ -290,7 +284,6 @@
         <option value="$PROJECT_DIR$/rtk/templates/default.yml-tpl" />
         <option value="$PROJECT_DIR$/rtk/core/application.py" />
         <option value="$PROJECT_DIR$/rtk/core/commands.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/rtk/bin/rtk-app" />
         <option value="$PROJECT_DIR$/rtk/core/build.py" />
         <option value="$PROJECT_DIR$/.rtk_cache/vodafone/echo.yml" />
@@ -298,6 +291,8 @@
         <option value="$PROJECT_DIR$/rtk/templates/django/TemplateWebApp/settings.py-tpl" />
         <option value="$PROJECT_DIR$/rtk/templates/django/template_app/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/rtk/templates/django/template_app/templates/common/layout.html" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/rtk/templates/django/template_app/urls.py-tpl" />
       </list>
     </option>
   </component>
@@ -536,13 +531,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525525977457</updated>
-    </task>
-    <task id="LOCAL-00031" summary="0.0.4b">
-      <created>1526966211024</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1526966211024</updated>
     </task>
     <task id="LOCAL-00032" summary="0.0.4c">
       <created>1526966436949</created>
@@ -880,7 +868,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540077283937</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="2.0.2 - Added a basic authentication layer and user DB.">
+      <created>1540079512675</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1540079512676</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -899,7 +894,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.87467587" weight="0.43493977" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.87467587" visible="true" weight="0.43493977" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.12532412" side_tool="true" weight="0.28" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32969698" />
@@ -947,7 +942,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="0.0.4k hotfix." />
     <MESSAGE value="0.0.4l hotfix." />
     <MESSAGE value="0.0.5" />
     <MESSAGE value="0.0.6 Fix for shared namespace bug." />
@@ -972,16 +966,10 @@
     <MESSAGE value="2.0.1c - (Hotfix) Quick update to CityVerve template." />
     <MESSAGE value="2.0.1c - (Hotfix) Added 'republic' variable to layout template footer." />
     <MESSAGE value="2.0.1c - (Hotfix) Correction to CityVerve template." />
-    <option name="LAST_COMMIT_MESSAGE" value="2.0.1c - (Hotfix) Correction to CityVerve template." />
+    <MESSAGE value="2.0.2 - Added a basic authentication layer and user DB." />
+    <option name="LAST_COMMIT_MESSAGE" value="2.0.2 - Added a basic authentication layer and user DB." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rtk/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.rtk_deployment/vodafone/basic.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -1261,16 +1249,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rtk/core/commands.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -1314,7 +1292,7 @@
     <entry file="file://$PROJECT_DIR$/.rtk_cache/vodafone/echo.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
-          <caret line="17" column="67" lean-forward="true" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+          <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -1335,14 +1313,14 @@
     <entry file="file://$PROJECT_DIR$/rtk/templates/django/TemplateWebApp/settings.py-tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="742">
-          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rtk/templates/django/template_app/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="171" column="47" lean-forward="true" selection-start-line="171" selection-start-column="47" selection-end-line="171" selection-end-column="47" />
+          <caret line="171" column="47" selection-start-line="171" selection-start-column="47" selection-end-line="171" selection-end-column="47" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
@@ -1351,8 +1329,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rtk/templates/django/template_app/templates/common/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="32" column="70" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
+        <state relative-caret-position="397">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/templates/django/template_app/urls.py-tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
     </entry>
