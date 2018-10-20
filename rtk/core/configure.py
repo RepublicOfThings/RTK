@@ -44,7 +44,6 @@ def configure_django_conf(django_conf,
     }
 
     thread = str(uuid.uuid4()).replace("-", "")
-    print({**{"victor": "ten"}})
     for template, conf in httpd_templates.items():
         output_file = os.path.join(django_conf, conf)
         path = template_path(template, pkg_dir="templates/conf")

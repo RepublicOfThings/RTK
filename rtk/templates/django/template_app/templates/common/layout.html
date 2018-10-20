@@ -52,7 +52,7 @@
             console.log(data);
 
             $.each(data, function(key, value) {
-                let link = "<a href='/{{ project }}"+value['url']+"' class='dropdown-item'>"+key+"</a>";
+                let link = "<a href='"+value['url']+"' class='dropdown-item'>"+key+"</a>";
                 $("#dashboards_dropdown").append(link);
                 console.log(link);
             });
