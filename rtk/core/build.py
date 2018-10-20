@@ -31,6 +31,7 @@ def template_walk(path, config, indicator="-tpl"):
             for file in files:
                 if is_template(file, indicator):
                     parameterise_template(file, config, root)
+                    os.remove(os.path.join(root, file))
                 progress.update(1)
 
 
