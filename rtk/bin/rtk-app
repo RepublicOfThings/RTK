@@ -62,6 +62,8 @@ delete.set_defaults(func=commands.delete)
 
 
 restart = subparsers.add_parser("restart", help="generate help")
+delete.add_argument("--client", required=True)
+delete.add_argument("--name", required=True)
 restart.set_defaults(func=commands.restart)
 
 

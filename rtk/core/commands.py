@@ -52,10 +52,19 @@ def build(config, **kwargs):
 
 
 def delete(config, **kwargs):
+    build_log.info(f"Deleting your application '{config.name}'...",
+                   extra=dict(event="CLI", meta="| IN PROGRESS"))
     app = RTKApp.from_cache(config, **kwargs)
     app.delete()
-
+    build_log.info(f"Application deleted.",
+                   extra=dict(event="CLI", meta="| COMPLETE"))
 
 def restart(config, **kwargs):
+    build_log.info(f"Restarting your application '{config.name}'...",
+                   extra=dict(event="CLI", meta="| IN PROGRESS"))
+    build_log.warn(f"Remember, this will restart ALL application, not just '{config.name}'...",
+                   extra=dict(event="CLI", meta="| IN PROGRESS"))
     app = RTKApp.from_cache(config, **kwargs)
     app.restart()
+    build_log.info(f"Application restarted.",
+                   extra=dict(event="CLI", meta="| TIP"))
