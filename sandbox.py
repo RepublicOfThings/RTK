@@ -39,10 +39,32 @@ gen.add_argument("--prompt", default=False, type=bool)
 gen.set_defaults(func=commands.generate)
 
 
-gen = subparsers.add_parser("activate", help="generate help")
-gen.add_argument("--client", required=True)
-gen.add_argument("--name", required=True)
-gen.set_defaults(func=commands.activate)
+activate = subparsers.add_parser("activate", help="generate help")
+activate.add_argument("--client", required=True)
+activate.add_argument("--name", required=True)
+activate.set_defaults(func=commands.activate)
+
+
+deactivate = subparsers.add_parser("deactivate", help="generate help")
+deactivate.add_argument("--client", required=True)
+deactivate.add_argument("--name", required=True)
+deactivate.set_defaults(func=commands.deactivate)
+
+
+build = subparsers.add_parser("build", help="generate help")
+build.add_argument("--client", required=True)
+build.add_argument("--name", required=True)
+build.set_defaults(func=commands.build)
+
+
+delete = subparsers.add_parser("delete", help="generate help")
+delete.add_argument("--client", required=True)
+delete.add_argument("--name", required=True)
+delete.set_defaults(func=commands.delete)
+
+
+restart = subparsers.add_parser("restart", help="generate help")
+restart.set_defaults(func=commands.restart)
 
 
 if __name__ == "__main__":

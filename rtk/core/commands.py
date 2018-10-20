@@ -33,6 +33,11 @@ def build(config, **kwargs):
     app.build()
 
 
+def delete(config, **kwargs):
+    app = RTKApp.from_cache(config, **kwargs)
+    app.delete()
+
+
 def restart(config, **kwargs):
     app = RTKApp.from_cache(config, **kwargs)
     app.restart()

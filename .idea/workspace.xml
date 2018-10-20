@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fd4d2f2-f118-49dd-be25-a0dfa7c5319e" name="Default" comment="">
+    <list default="true" id="8fd4d2f2-f118-49dd-be25-a0dfa7c5319e" name="Default" comment="2.0.0">
+      <change beforePath="$PROJECT_DIR$/.idea/RTK2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RTK2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtk/deployment/core/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/deployment/core/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtk/deployment/core/gen.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/deployment/core/gen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtk/deployment/templates/httpd_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/deployment/templates/httpd_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rtk/core/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/core/commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,98 +16,176 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/RTK2$rtk_deploy.coverage" NAME="rtk_deploy Coverage Results" MODIFIED="1526736823476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RTK$playground.coverage" NAME="playground Coverage Results" MODIFIED="1540054523819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RTK2$sandbox.coverage" NAME="sandbox Coverage Results" MODIFIED="1527016074957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RTK$sandbox.coverage" NAME="sandbox Coverage Results" MODIFIED="1540045754678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2113083359">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="conf" value="17" />
+          <entry key="conf-o" value="1" />
+          <entry key="conf-r" value="1" />
+          <entry key="conf-r-r2" value="1" />
+          <entry key="conf-t" value="2" />
+          <entry key="conf-tpl" value="12" />
+          <entry key="css" value="1" />
+          <entry key="html" value="1" />
+          <entry key="in" value="3" />
+          <entry key="md" value="1" />
+          <entry key="py" value="58" />
+          <entry key="py-tpl" value="2" />
+          <entry key="rtk-app" value="4" />
+          <entry key="sh" value="2" />
+          <entry key="txt" value="1" />
+          <entry key="vodafone_app" value="1" />
+          <entry key="yml" value="16" />
+          <entry key="yml-tpl" value="34" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="1" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="80" />
+          <entry key="Python" value="59" />
+          <entry key="YAML" value="16" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="conf" value="79" />
+          <entry key="conf-tpl" value="84" />
+          <entry key="dummy" value="9" />
+          <entry key="html" value="13" />
+          <entry key="in" value="100" />
+          <entry key="py" value="8196" />
+          <entry key="rtk-app" value="76" />
+          <entry key="txt" value="140" />
+          <entry key="yml" value="27" />
+          <entry key="yml-tpl" value="828" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="13" />
+          <entry key="PLAIN_TEXT" value="1316" />
+          <entry key="Python" value="8196" />
+          <entry key="YAML" value="27" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sandbox.py" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sandbox.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="256">
+              <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#49#0" expanded="true" />
+                <marker date="1540064115640" expanded="true" signature="470:472" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rtk/deployment/core/config.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rtk/core/commands.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="83" column="37" lean-forward="true" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
+            <state relative-caret-position="288">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+                <marker date="1540064115635" expanded="true" signature="212:214" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gen.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rtk/deployment/core/gen.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rtk/bin/rtk-app">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="71" column="86" selection-start-line="71" selection-start-column="86" selection-end-line="71" selection-end-column="86" />
+            <state relative-caret-position="278">
+              <caret line="60" column="30" selection-end-line="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rtk/core/application.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+                <marker date="1540061829392" expanded="true" signature="474:968" ph="..." />
+                <marker date="1540061829392" expanded="true" signature="798:968" ph="..." />
+                <marker date="1540061829392" expanded="true" signature="1307:1376" ph="..." />
+                <marker date="1540061829392" expanded="true" signature="1405:1464" ph="..." />
+                <marker date="1540061829392" expanded="true" signature="1536:1542" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rtk/deployment/core/app.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rtk/templates/cityverve.yml-tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="15" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rtk/core/configure.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <marker date="1540061499140" expanded="true" signature="1009:1010" ph="..." />
+                <marker date="1540061499140" expanded="true" signature="1010:1012" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rtk/utils/files.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+                <marker date="1540050555124" expanded="true" signature="98:99" ph="..." />
+                <marker date="1540050555124" expanded="true" signature="246:363" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rtk/templates/conf/httpd-prefix.conf-tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="35" column="88" selection-start-line="35" selection-start-column="88" selection-end-line="35" selection-end-column="88" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="httpd_app.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rtk/deployment/templates/httpd_app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="httpd-app-template.conf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.rtk_deployment/test/config/httpd-app-template.conf">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.rtk_deployment/test/app/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deploy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deploy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1920">
-              <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+              <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -149,61 +227,66 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/rtk2/deploy/templates/defaults.py" />
-        <option value="$PROJECT_DIR$/rtk2/deploy/core/utils.py" />
-        <option value="$PROJECT_DIR$/rtk2/deploy/core/deployer.py" />
-        <option value="$PROJECT_DIR$/rtk2/deploy/core/__init__.py" />
-        <option value="$PROJECT_DIR$/rtk2/deploy/__init__.py" />
-        <option value="$PROJECT_DIR$/rtk2/deployment/templates/__init__.py" />
-        <option value="$PROJECT_DIR$/settings.txt" />
-        <option value="$PROJECT_DIR$/rtk2/deployment/example" />
-        <option value="$PROJECT_DIR$/rtk2/deployment/README.md" />
-        <option value="$PROJECT_DIR$/rtk2/deployment/templates/defaults.py" />
-        <option value="$PROJECT_DIR$/rtk2/deployment/resources/example.txt" />
-        <option value="$PROJECT_DIR$/rtk2/deployment/core/utils.py" />
-        <option value="$PROJECT_DIR$/rtk2/deployment/templates/django.py" />
-        <option value="$PROJECT_DIR$/rtk2/deployment/templates/django_app.py" />
-        <option value="$PROJECT_DIR$/rtk2/deployment/core/deployer.py" />
-        <option value="$PROJECT_DIR$/rtk2/deployment/templates/deployment.py" />
-        <option value="$PROJECT_DIR$/rtk2/deployment/templates/httpd_prefix.py" />
-        <option value="$PROJECT_DIR$/rtk2/deployment/templates/httpd_app.py" />
-        <option value="$PROJECT_DIR$/rtk/deployment/templates/settings.py" />
-        <option value="$PROJECT_DIR$/demo_settings/settings.py" />
-        <option value="$PROJECT_DIR$/deploy_mca_clone.sh" />
-        <option value="$PROJECT_DIR$/Demo_deployment/deployment.json" />
-        <option value="$PROJECT_DIR$/rtk/deployment/templates/deployment.py" />
-        <option value="$PROJECT_DIR$/Demo_settings/settings.py" />
-        <option value="$PROJECT_DIR$/holding.html" />
-        <option value="$PROJECT_DIR$/deployer.sh" />
-        <option value="$PROJECT_DIR$/rtk_deploy.py" />
-        <option value="$PROJECT_DIR$/.rtk_deployment/Test/app/settings.py" />
-        <option value="$PROJECT_DIR$/webapp.py" />
-        <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/rtk/deployment/__init__.py" />
-        <option value="$PROJECT_DIR$/rtk/deployment/templates/template.py" />
-        <option value="$PROJECT_DIR$/rtk/deployment/core/utils.py" />
         <option value="$PROJECT_DIR$/bangers.txt" />
         <option value="$PROJECT_DIR$/rtk/deployment/templates/defaults.py" />
         <option value="$PROJECT_DIR$/rtk/deployment/core/__init__.py" />
         <option value="$PROJECT_DIR$/rtk/deployment/core/loggers.py" />
         <option value="$PROJECT_DIR$/rtk/deployment/core/deployer.py" />
-        <option value="$PROJECT_DIR$/rtk/utils/keys.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/rtk/deployment/helpers.py" />
         <option value="$PROJECT_DIR$/example" />
-        <option value="$PROJECT_DIR$/sandbox.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.rtk_deployment/test/app/settings.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/rtk/deployment/core/app.py" />
         <option value="$PROJECT_DIR$/deploy.py" />
         <option value="$PROJECT_DIR$/rtk/deployment/core/config.py" />
         <option value="$PROJECT_DIR$/rtk/deployment/templates/httpd_app.py" />
         <option value="$PROJECT_DIR$/rtk/deployment/core/gen.py" />
+        <option value="$PROJECT_DIR$/rtk/utils/keys.py" />
+        <option value="$PROJECT_DIR$/test.conf" />
+        <option value="$PROJECT_DIR$/rtk/utils/__init__.py" />
+        <option value="$PROJECT_DIR$/rtk/templates/council.yml-tpl" />
+        <option value="$PROJECT_DIR$/.rtk_deployment/vodafone/vodafone_app.yml" />
+        <option value="$PROJECT_DIR$/rtk/core/parsing.py" />
+        <option value="$PROJECT_DIR$/.rtk_deployment/vodafone/basic.yml" />
+        <option value="$PROJECT_DIR$/rtk/__init__.py" />
+        <option value="$PROJECT_DIR$/rtk/core/github.py" />
+        <option value="$PROJECT_DIR$/rtk/core/generate.py" />
+        <option value="$PROJECT_DIR$/rtk/core/activate.py" />
+        <option value="$PROJECT_DIR$/rtk/templates/conf/httpd-app.conf-tpl" />
+        <option value="$PROJECT_DIR$/rtk/core/__init__.py" />
+        <option value="$PROJECT_DIR$/rtk/core/django_conf.py" />
+        <option value="$PROJECT_DIR$/rtk/utils/files.py" />
+        <option value="$PROJECT_DIR$/apache2/bitnami-apps-prefix.conf" />
+        <option value="$PROJECT_DIR$/rtk/utils/logs.py" />
+        <option value="$PROJECT_DIR$/.rtk_cache/vodafone/basic.yml" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/.rtk_cache/vodafone/Testbed.yml" />
+        <option value="$PROJECT_DIR$/MANIFEST.in" />
+        <option value="$PROJECT_DIR$/rtk/core/processing.py" />
+        <option value="$PROJECT_DIR$/rtk/core/build.py" />
+        <option value="$PROJECT_DIR$/rtk/templates/default.yml-tpl" />
+        <option value="$PROJECT_DIR$/rtk/templates/vodafone.yml-tpl" />
+        <option value="$PROJECT_DIR$/.rtk_cache/vodafone/foxtrot.yml" />
+        <option value="$PROJECT_DIR$/playground.py" />
+        <option value="$PROJECT_DIR$/rtk/templates/django/template_app/templates/pages/home/index.html" />
+        <option value="$PROJECT_DIR$/rtk/templates/django/template_app/views.py-tpl" />
+        <option value="$PROJECT_DIR$/rtk/templates/cityverve.yml-tpl" />
+        <option value="$PROJECT_DIR$/rtk/templates/conf/httpd-prefix.conf-tpl" />
+        <option value="$PROJECT_DIR$/rtk/core/configure.py" />
+        <option value="$PROJECT_DIR$/rtk/core/application.py" />
+        <option value="$PROJECT_DIR$/rtk/bin/rtk-app" />
+        <option value="$PROJECT_DIR$/sandbox.py" />
+        <option value="$PROJECT_DIR$/rtk/core/commands.py" />
       </list>
     </option>
   </component>
@@ -212,9 +295,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
@@ -231,58 +311,53 @@
         <subPane>
           <expand>
             <path>
-              <item name="RTK2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RTK2" type="462c0819:PsiDirectoryNode" />
+              <item name="RTK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RTK" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="RTK2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RTK2" type="462c0819:PsiDirectoryNode" />
-              <item name=".rtk_deployment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RTK2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RTK2" type="462c0819:PsiDirectoryNode" />
-              <item name=".rtk_deployment" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RTK2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RTK2" type="462c0819:PsiDirectoryNode" />
-              <item name=".rtk_deployment" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RTK2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RTK2" type="462c0819:PsiDirectoryNode" />
-              <item name=".rtk_deployment" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RTK2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RTK2" type="462c0819:PsiDirectoryNode" />
+              <item name="RTK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RTK" type="462c0819:PsiDirectoryNode" />
               <item name="rtk" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="RTK2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RTK2" type="462c0819:PsiDirectoryNode" />
+              <item name="RTK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RTK" type="462c0819:PsiDirectoryNode" />
               <item name="rtk" type="462c0819:PsiDirectoryNode" />
-              <item name="deployment" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="RTK2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RTK2" type="462c0819:PsiDirectoryNode" />
+              <item name="RTK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RTK" type="462c0819:PsiDirectoryNode" />
               <item name="rtk" type="462c0819:PsiDirectoryNode" />
-              <item name="deployment" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="RTK2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RTK2" type="462c0819:PsiDirectoryNode" />
+              <item name="RTK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RTK" type="462c0819:PsiDirectoryNode" />
               <item name="rtk" type="462c0819:PsiDirectoryNode" />
-              <item name="deployment" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RTK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RTK" type="462c0819:PsiDirectoryNode" />
+              <item name="rtk" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RTK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RTK" type="462c0819:PsiDirectoryNode" />
+              <item name="rtk" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="django" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RTK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RTK" type="462c0819:PsiDirectoryNode" />
+              <item name="rtk" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="django" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -293,16 +368,22 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/rtk2/deployment/resources" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rtk/templates/django" />
+      <recent name="$PROJECT_DIR$/rtk/templates/app/TemplateApp" />
+      <recent name="$PROJECT_DIR$/rtk/templates/conf" />
       <recent name="$PROJECT_DIR$/rtk2/deploy/templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rtk/legacy" />
+      <recent name="$PROJECT_DIR$/rtk" />
+      <recent name="$PROJECT_DIR$/rtk2/deployment/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -317,7 +398,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sandbox">
+  <component name="RunManager" selected="Python.playground">
+    <configuration name="playground" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="RTK2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/playground.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="rtk_deploy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RTK2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -331,11 +434,14 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deploy.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rtk/legacy/deploy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="sandbox" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RTK2" />
@@ -355,13 +461,18 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.sandbox" />
       <item itemvalue="Python.rtk_deploy" />
+      <item itemvalue="Python.playground" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.playground" />
         <item itemvalue="Python.sandbox" />
         <item itemvalue="Python.rtk_deploy" />
       </list>
@@ -377,13 +488,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525525977457</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Changed command-line app. Stream-lined deployment.">
-      <created>1526744560868</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1526744560868</updated>
     </task>
     <task id="LOCAL-00018" summary="Changed command-line app. Stream-lined deployment.">
       <created>1526744991786</created>
@@ -721,71 +825,80 @@
       <option name="project" value="LOCAL" />
       <updated>1529348095988</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="2.0.0 - Extensive refactoring, entirely new, streamlined deployment tools. Added ability to serve multiple apps for single users.">
+      <created>1540061944774</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1540061944775</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.12532412" side_tool="true" weight="0.28" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.15636364" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32969698" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.87467587" visible="true" weight="0.41454545" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18097281" />
-      <window_info anchor="right" id="R Packages" order="3" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26609442" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32771084" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39036146" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.87467587" visible="true" weight="0.41445783" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.12532412" side_tool="true" weight="0.28" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32969698" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32848486" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="R Graphics" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17453505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="R Graphics" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15636364" />
-      <window_info anchor="right" id="R Packages" order="5" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32969698" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32848486" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15636364" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.87467587" weight="0.40363637" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.12532412" side_tool="true" weight="0.28" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32969698" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="R Graphics" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Completed Alpha -- hotfix (7)." />
     <MESSAGE value="Added documentation." />
     <MESSAGE value="Changed command-line app. Stream-lined deployment." />
     <MESSAGE value="0.0.4" />
@@ -810,335 +923,390 @@
     <MESSAGE value="0.0.6 Fix for shared namespace bug. Hotfix (e)." />
     <MESSAGE value="0.0.6 Fix for shared namespace bug. Hotfix (f)." />
     <MESSAGE value="0.0.6 Fix for shared namespace bug. Hotfix (g)." />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.6 Fix for shared namespace bug. Hotfix (g)." />
+    <MESSAGE value="2.0.0 - Extensive refactoring, entirely new, streamlined deployment tools. Added ability to serve multiple apps for single users." />
+    <option name="LAST_COMMIT_MESSAGE" value="2.0.0 - Extensive refactoring, entirely new, streamlined deployment tools. Added ability to serve multiple apps for single users." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.rtk_deployment/test/app/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/gen.py">
+    <entry file="file://$PROJECT_DIR$/rtk/legacy/deployment/templates/template.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="40" column="18" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="18" />
+          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.conf-t">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/legacy/deployment/templates/httpd_app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/legacy/deployment/core/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="84" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.py">
+    <entry file="file://$PROJECT_DIR$/rtk/utils/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        <state>
+          <caret column="73" selection-start-column="73" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/legacy/deployment/templates/defaults.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.rtk_deployment/vodafone/vodafone_app">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-127" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.rtk_deployment/vodafone/vodafone_app.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="28" selection-start-line="28" selection-end-line="31" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/core/parsing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1230">
-            <caret line="82" column="40" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="40" />
-          </first_editor>
-          <second_editor>
-            <js_state>
-              <onLoadScroll type="JSON" value="{&quot;x&quot;:0,&quot;y&quot;:0}" />
-            </js_state>
-          </second_editor>
+          <first_editor relative-caret-position="-6" />
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/templates/django_app.py">
+    <entry file="file://$PROJECT_DIR$/rtk/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="23" />
+        <state relative-caret-position="60">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/utils.py">
+    <entry file="file://$PROJECT_DIR$/.rtk_deployment/vodafone/basic.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+        <state relative-caret-position="143">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/templates/deployment.py">
+    <entry file="file://$PROJECT_DIR$/rtk/core/activate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.txt" />
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/resources/example.txt">
+    <entry file="file://$PROJECT_DIR$/rtk/core/generate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/templates/django_app.py">
+    <entry file="file://$PROJECT_DIR$/httpd-prefix.conf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/httpd-app.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="23" />
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/django/django_projects/Demo/conf/httpd-app.conf" />
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="89" selection-start-line="9" selection-start-column="89" selection-end-line="9" selection-end-column="89" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/apache2/bitnami-apps-prefix.conf">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/logging/__init__.py">
+    <entry file="file://$PROJECT_DIR$/django/django_projects/basic/basic/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="1356" column="8" selection-start-line="1356" selection-start-column="8" selection-end-line="1356" selection-end-column="8" />
+        <state relative-caret-position="326">
+          <caret line="23" column="65" lean-forward="true" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo_deployment/deployment.json" />
-    <entry file="file://$PROJECT_DIR$/Demo_deployment/httpd-app-template.conf" />
-    <entry file="file://$PROJECT_DIR$/Demo_settings/settings.py" />
-    <entry file="file:///usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/ntpath.py">
+    <entry file="file://$PROJECT_DIR$/django/django_projects/basic/conf/httpd-app.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+        <state relative-caret-position="210">
+          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deployer.sh" />
-    <entry file="file://$PROJECT_DIR$/holding.html" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/argparse.pyi">
+    <entry file="file://$PROJECT_DIR$/django/django_projects/basic/conf/httpd-prefix.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/argparse.py">
+    <entry file="file://$PROJECT_DIR$/rtk/utils/logs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="1599" column="8" selection-start-line="1599" selection-start-column="8" selection-end-line="1599" selection-end-column="8" />
+        <state relative-caret-position="60">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deploy_mca_clone.sh" />
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/python_stubs/1018255768/posix.py">
+    <entry file="file://$PROJECT_DIR$/rtk/core/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="172" column="4" selection-start-line="172" selection-start-column="4" selection-end-line="172" selection-end-column="4" />
+        <state relative-caret-position="30">
+          <caret line="2" column="44" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bangers.txt" />
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/templates/template.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/rtk/templates/app/TemplateApp/static/app/content/r2.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/__init__.py">
+    <entry file="file://$PROJECT_DIR$/django/django_projects/basic/webapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="42" selection-start-column="42" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/__init__.py">
+    <entry file="file://$PROJECT_DIR$/rtk/templates/conf/httpd-app.conf-tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="195">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/templates/defaults.py">
+    <entry file="file://$PROJECT_DIR$/rtk/templates/django/manage.py-tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.rtk_cache/vodafone/basic.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        <state relative-caret-position="76">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/templates/deployment.py">
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-1199943127/posix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/typing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="2258" column="8" selection-start-line="2258" selection-start-column="8" selection-end-line="2258" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/deployer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="101" selection-start-line="101" selection-end-line="116" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/re.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="168" column="4" selection-start-line="168" selection-start-column="4" selection-end-line="168" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/loggers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="4" selection-start-line="3" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/utils/keys.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/templates/httpd_prefix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://$PROJECT_DIR$/example" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="426">
-            <caret line="82" column="40" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="40" />
-          </first_editor>
-          <second_editor>
-            <js_state>
-              <onLoadScroll type="JSON" value="{&quot;x&quot;:0,&quot;y&quot;:0}" />
-            </js_state>
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/python_stubs/1018255768/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="5048" column="8" selection-start-line="5048" selection-start-column="8" selection-end-line="5048" selection-end-column="8" />
+        <state relative-caret-position="-8">
+          <caret line="565" column="4" selection-start-line="565" selection-start-column="4" selection-end-line="565" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="150">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.rtk_deployment/test/app/settings.py">
+    <entry file="file://$PROJECT_DIR$/.rtk_cache/vodafone/Testbed.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="301">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.py">
+    <entry file="file://$PROJECT_DIR$/.rtk_cache/vodafone/test.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1920">
-          <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
+        <state relative-caret-position="98">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/core/github.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="91" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1540046745875" expanded="true" signature="527:562" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/config.py">
+    <entry file="file://$PROJECT_DIR$/MANIFEST.in">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="83" column="37" lean-forward="true" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
+        <state>
+          <caret column="125" selection-start-column="125" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/templates/default.yml-tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="128" selection-start-line="8" selection-start-column="128" selection-end-line="8" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/core/build.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="74" column="35" lean-forward="true" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.rtk_deployment/test/config/httpd-app-template.conf">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/rtk/core/processing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1540058552052" expanded="true" signature="683:686" ph="..." />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/templates/httpd_app.py">
+    <entry file="file://$PROJECT_DIR$/rtk/templates/vodafone.yml-tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.rtk_cache/vodafone/foxtrot.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/app.py">
+    <entry file="file://$PROJECT_DIR$/rtk/templates/django/template_app/views.py-tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="35" column="88" selection-start-line="35" selection-start-column="88" selection-end-line="35" selection-end-column="88" />
+        <state relative-caret-position="428">
+          <caret line="52" column="94" selection-start-line="52" selection-start-column="94" selection-end-line="52" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/templates/django/template_app/templates/pages/home/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="95" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playground.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/deployment/core/gen.py">
+    <entry file="file://$PROJECT_DIR$/rtk/templates/django/conf/httpd-app.conf-tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/templates/conf/httpd-prefix.conf-tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="71" column="86" selection-start-line="71" selection-start-column="86" selection-end-line="71" selection-end-column="86" />
+        <state relative-caret-position="15">
+          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/utils/files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <marker date="1540050555124" expanded="true" signature="98:99" ph="..." />
+            <marker date="1540050555124" expanded="true" signature="246:363" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/templates/django/conf/httpd-prefix.conf-tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/core/configure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <marker date="1540061499140" expanded="true" signature="1009:1010" ph="..." />
+            <marker date="1540061499140" expanded="true" signature="1010:1012" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/templates/cityverve.yml-tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/core/application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1540061829392" expanded="true" signature="474:968" ph="..." />
+            <marker date="1540061829392" expanded="true" signature="798:968" ph="..." />
+            <marker date="1540061829392" expanded="true" signature="1307:1376" ph="..." />
+            <marker date="1540061829392" expanded="true" signature="1405:1464" ph="..." />
+            <marker date="1540061829392" expanded="true" signature="1536:1542" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/bin/rtk-app">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="60" column="30" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+            <marker date="1540064115640" expanded="true" signature="470:472" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/core/commands.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1540064115635" expanded="true" signature="212:214" ph="..." />
           </folding>
         </state>
       </provider>
