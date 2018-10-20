@@ -22,7 +22,8 @@ application:
     name: {{ name }}_app
     project: {{ project }}
     style:
-        css: {{ django_base }}/{{ project }}/{{ project }}/static/app/content/republic.css
-        client_logo: {{ client_logo }}
+        css: {{ project }}/{{ project }}/static/app/content/republic.css
+        logo: {{ client_logo }}
+        republic: {{ project }}/{{ project }}/static/app/content/republic_logo.png
 
     dashboards: null

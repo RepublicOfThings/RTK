@@ -22,11 +22,13 @@ application:
     name: {{ name }}_app
     project: {{ project }}
     style:
-        css: {{ django_base }}/{{ project }}/{{ project }}/static/app/content/republic.css
+        css: /{{ project }}/{{ project }}/static/app/content/republic.css
         logo: https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Vodafone_2017_logo.svg/1024px-Vodafone_2017_logo.svg.png
+        republic: /{{project}}/{{project}}/static/app/content/republic_logo.png
+        smeiling: /{{project}}/{{project}}/static/app/content/smeiling_logo.png
 
     dashboards:
         Vodafone:
-          url: /dashboard/vodafone/
+          url: /{{ project }}/dashboard/vodafone/
           dash: smeiling_dashboard_vodafone_demo_v10
           app: rot_smart_homes_app

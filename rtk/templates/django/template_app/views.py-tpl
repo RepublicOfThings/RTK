@@ -16,15 +16,13 @@ design = application.get("style")
 
 def home(request):
     return HttpResponse(render(request, 'pages/home/index.html', {"title": "Home",
-                                                                  "css": design["css"],
-                                                                  "logo": design["logo"],
+                                                                  **design,
                                                                   "dashboards": dashes,}))
 
 
 def about(request):
     return HttpResponse(render(request, 'pages/about/index.html', {"title": "About",
-                                                                   "css": design["css"],
-                                                                   "logo": design["logo"],
+                                                                   **design,
                                                                    "dashboards": dashes}))
 
 

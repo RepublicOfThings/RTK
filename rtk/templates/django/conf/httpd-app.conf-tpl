@@ -6,7 +6,7 @@
     Alias {{ project }}/static "{{ django_static }}"
     WSGIScriptAlias /{{ project }} "{{ django_wsgi }}"
 
-    <Directory "{{ django_app }}/">
+    <Directory "{{ django_project }}/{{ project }}">
         WSGIProcessGroup wsgi-djangostack-{{ thread }}
         WSGIApplicationGroup %{GLOBAL}
     <IfVersion < 2.3 >
