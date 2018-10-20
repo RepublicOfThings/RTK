@@ -22,17 +22,17 @@ application:
     name: {{ name }}_app
     project: {{ project }}
     style:
-        css: {{ django_base }}/{{ project }}/{{ project }}/static/app/content/republic.css
+        css: {{ project }}/{{ project }}/static/app/content/republic.css
         logo: https://travelspirit.foundation/wp-content/uploads/2017/04/City-Verve-Logo.png
         republic: /{{project}}/{{project}}/static/app/republic_logo.png
         smeiling: /{{project}}/{{project}}/static/app/smeiling_logo.png
 
     dashboards:
         Alerts:
-          url: /dashboard/alerts/
+          url: /{{project}}/dashboard/alerts/
           dash: incident_posture_clone_v10
           app: alert_manager
         Connected Homes:
-          url: /dashboard/homes/
+          url: /{{project}}/dashboard/homes/
           dash: smeiling_dashboard_mca_v10_splunk
           app: rot_smart_homes_app
