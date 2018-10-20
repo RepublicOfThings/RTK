@@ -1,6 +1,6 @@
 import os
 import tqdm
-import yaml
+import time
 import uuid
 import shutil
 import pkg_resources
@@ -30,6 +30,7 @@ def template_walk(path, config, indicator="-tpl"):
         for root, dirs, files in os.walk(path):
             for file in files:
                 if is_template(file, indicator):
+                    time.sleep(0.1)
                     parameterise_template(file, config, root)
                     os.remove(os.path.join(root, file))
                 progress.update(1)

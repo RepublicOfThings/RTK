@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fd4d2f2-f118-49dd-be25-a0dfa7c5319e" name="Default" comment="2.0.1b - Added corrections to project templates. Added some logging capabilities.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="8fd4d2f2-f118-49dd-be25-a0dfa7c5319e" name="Default" comment="2.0.1c - Added corrections to project templates. Added some logging capabilities.">
       <change beforePath="$PROJECT_DIR$/rtk/bin/rtk-app" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/bin/rtk-app" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtk/core/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/core/application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rtk/core/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtk/core/commands.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,10 +71,10 @@
           <entry key="html" value="36" />
           <entry key="html-tpl" value="59" />
           <entry key="in" value="157" />
-          <entry key="py" value="9674" />
+          <entry key="py" value="9714" />
           <entry key="py-tpl" value="42" />
           <entry key="rtk-app" value="79" />
-          <entry key="txt" value="546" />
+          <entry key="txt" value="547" />
           <entry key="yml" value="27" />
           <entry key="yml-tpl" value="937" />
         </counts>
@@ -85,8 +82,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="36" />
-          <entry key="PLAIN_TEXT" value="2002" />
-          <entry key="Python" value="9674" />
+          <entry key="PLAIN_TEXT" value="2003" />
+          <entry key="Python" value="9714" />
           <entry key="YAML" value="27" />
         </counts>
       </usages-collector>
@@ -131,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rtk/core/application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="69" selection-start-line="69" selection-end-line="71" selection-end-column="62" />
+            <state relative-caret-position="149">
+              <caret line="66" column="39" selection-start-line="69" selection-end-line="71" selection-end-column="62" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <marker date="1540076180808" expanded="true" signature="511:2137" ph="..." />
@@ -159,24 +156,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rtk/bin/rtk-app">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="309">
-              <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+              <caret line="65" column="7" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rtk/core/commands.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+            <state relative-caret-position="329">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1540076300813" expanded="true" signature="248:251" ph="..." />
-                <marker date="1540076300813" expanded="true" signature="249:251" ph="..." />
+                <marker date="1540076331480" expanded="true" signature="248:251" ph="..." />
+                <marker date="1540076331480" expanded="true" signature="249:251" ph="..." />
               </folding>
             </state>
           </provider>
@@ -285,13 +282,13 @@
         <option value="$PROJECT_DIR$/a" />
         <option value="$PROJECT_DIR$/playground.py" />
         <option value="$PROJECT_DIR$/rtk/core/build.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/rtk/templates/vodafone.yml-tpl" />
         <option value="$PROJECT_DIR$/rtk/templates/default.yml-tpl" />
         <option value="$PROJECT_DIR$/rtk/templates/cityverve.yml-tpl" />
         <option value="$PROJECT_DIR$/rtk/core/application.py" />
-        <option value="$PROJECT_DIR$/rtk/bin/rtk-app" />
         <option value="$PROJECT_DIR$/rtk/core/commands.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/rtk/bin/rtk-app" />
       </list>
     </option>
   </component>
@@ -508,13 +505,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525525977457</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Changed command-line app. Stream-lined deployment.">
-      <created>1526747127373</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1526747127373</updated>
     </task>
     <task id="LOCAL-00026" summary="Changed command-line app. Stream-lined deployment.">
       <created>1526747204126</created>
@@ -852,7 +842,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540075566887</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="2.0.1c - Added corrections to project templates. Added some logging capabilities.">
+      <created>1540076354333</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1540076354333</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -919,7 +916,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="0.0.4f" />
     <MESSAGE value="0.0.4f hotfix." />
     <MESSAGE value="0.0.4g hotfix." />
     <MESSAGE value="0.0.4h hotfix." />
@@ -944,7 +940,8 @@
     <MESSAGE value="2.0.1b - Added cleanup to remove templates from application directories." />
     <MESSAGE value="2.0.1b - Added corrections to project templates." />
     <MESSAGE value="2.0.1b - Added corrections to project templates. Added some logging capabilities." />
-    <option name="LAST_COMMIT_MESSAGE" value="2.0.1b - Added corrections to project templates. Added some logging capabilities." />
+    <MESSAGE value="2.0.1c - Added corrections to project templates. Added some logging capabilities." />
+    <option name="LAST_COMMIT_MESSAGE" value="2.0.1c - Added corrections to project templates. Added some logging capabilities." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/rtk/core/parsing.py">
@@ -1282,6 +1279,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rtk/utils/logs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="9" selection-start-line="4" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1292,17 +1296,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/utils/logs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="9" selection-start-line="4" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rtk/core/application.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="69" selection-start-line="69" selection-end-line="71" selection-end-column="62" />
+        <state relative-caret-position="149">
+          <caret line="66" column="39" selection-start-line="69" selection-end-line="71" selection-end-column="62" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <marker date="1540076180808" expanded="true" signature="511:2137" ph="..." />
@@ -1310,22 +1307,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/bin/rtk-app">
+    <entry file="file://$PROJECT_DIR$/rtk/core/commands.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+        <state relative-caret-position="329">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1540076331480" expanded="true" signature="248:251" ph="..." />
+            <marker date="1540076331480" expanded="true" signature="249:251" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rtk/core/commands.py">
+    <entry file="file://$PROJECT_DIR$/rtk/bin/rtk-app">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1540076300813" expanded="true" signature="248:251" ph="..." />
-            <marker date="1540076300813" expanded="true" signature="249:251" ph="..." />
-          </folding>
+        <state relative-caret-position="309">
+          <caret line="65" column="7" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
         </state>
       </provider>
     </entry>
