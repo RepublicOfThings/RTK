@@ -1,0 +1,36 @@
+client: {{ client }}
+
+setup:
+    splunk:
+        port: {{ splunk_port }}
+        host: {{ splunk_host }}
+        username: {{ splunk_username }}
+        password: {{ splunk_password }}
+        url_template: http://{host}:{port}/en-US/account/insecurelogin?username={user}&password={pwd}&return_to=app/{app}/{dash}
+
+    paths:
+        django_base: {{ django_base }}
+        django_app: {{ django_base }}/{{ project }}/{{ name }}_app
+        django_project: {{ django_base }}/{{ project }}
+        django_conf: {{ django_base }}/{{ project }}/conf
+        django_wsgi: {{ django_base }}/{{ project }}/{{ project }}/wsgi.py
+        django_static: {{ django_base }}/{{ project }}/{{ project }}/static
+        bitnami_conf: {{ apache_base }}/conf/bitnami/bitnami-apps-prefix.conf
+        sys_ctl: {{ stack_base }}/ctlscript.sh
+
+application:
+    name: {{ name }}_app
+    project: {{ project }}
+    style:
+        css: {{ django_base }}/{{ project }}/{{ project }}/static/app/content/republic.css
+        logo: https://travelspirit.foundation/wp-content/uploads/2017/04/City-Verve-Logo.png
+
+    dashboards:
+        Alerts:
+          url: /dashboard/alerts/
+          dash: incident_posture_clone_v10
+          app: alert_manager
+        Connected Homes:
+          url: /dashboard/homes/
+          dash: smeiling_dashboard_mca_v10_splunk
+          app: rot_smart_homes_app

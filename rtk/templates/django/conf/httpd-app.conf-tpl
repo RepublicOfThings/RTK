@@ -1,0 +1,19 @@
+<IfDefine !IS_DJANGOSTACK_LOADED_{{ thread }}>
+    Define IS_DJANGOSTACK_LOADED_{{ thread }}
+    WSGIDaemonProcess wsgi-djangostack-{{ thread }} processes=2 threads=15 display-name=%{GROUP}
+</IfDefine>
+
+    Alias {{ project }}/static "{{ django_static }}"
+    WSGIScriptAlias /{{ project }} "{{ django_wsgi }}"
+
+    <Directory "{{ django_app }}/">
+        WSGIProcessGroup wsgi-djangostack-{{ thread }}
+        WSGIApplicationGroup %{GLOBAL}
+    <IfVersion < 2.3 >
+        Order allow,deny
+        Allow from all
+    </IfVersion>
+    <IfVersion >= 2.3>
+        Require all granted
+    </IfVersion>
+ </Directory>

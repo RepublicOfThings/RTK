@@ -1,0 +1,11 @@
+dashboards:
+    name: {{ name }}
+    project: {{ project }}
+    style:
+        css: '{django_static}/app/content/republic.css'
+        client_logo: https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Vodafone_2017_logo.svg/1024px-Vodafone_2017_logo.svg.png
+
+    Vodafone:
+      url: /dashboard/vodafone/
+      dash: smeiling_dashboard_vodafone_demo_v10
+      app: rot_smart_homes_app

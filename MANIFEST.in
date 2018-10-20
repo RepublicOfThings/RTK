@@ -1,0 +1,1 @@
+recursive-include rtk/templates/ *.js *.css *.woff *.txt *.md *.conf-tpl *.yml-tpl *.py-tpl *.py *.sqlite3 *.html *.png *.svg

@@ -3,9 +3,11 @@ from setuptools import find_packages
 
 
 setup(name='rtk',
-      version="0.0.6",
+      version="2.0.0",
       description='RTK',
       author_email='mark@douthwaite.io',
       packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
+      include_package_data=True,
+      scripts=['./rtk/bin/rtk-app']
       )
 

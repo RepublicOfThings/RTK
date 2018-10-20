@@ -1,0 +1,2 @@
+
+Include "{{ django_base }}/{{ project }}/conf/httpd-app.conf"
