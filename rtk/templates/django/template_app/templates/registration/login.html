@@ -1,7 +1,7 @@
 
 {% block login %}
     {% load static %}
-    <link rel="stylesheet" href={% static "app/content/rtk.css" %}>
+    <link rel="stylesheet" href={{css}}>
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
@@ -144,16 +144,15 @@
         }
     </style>
 
-        <title>RoT - Authenticate</title>
+        <title>SmEILing™ - Login</title>
 
 
     {% load static %}
-        {% include "common/topnav.html" %}
-    {% block navigation %}{% endblock %}
+
     <div class="container" style="padding-top: 100px;">
         <div class="card card-container mx-auto" style="float: none; color: white;">
             <div class="logo">
-                <img class="img-responsive card-img col-md-12" src={% static "app/SmEILing.png" %}>
+                <img class="img-responsive card-img col-md-12" src="{{smeiling}}" style="max-height: 130px">
             </div>
             <div class="form">
                 <form class="form-signin" method="post" action="{% url 'login' %}">
@@ -189,7 +188,7 @@
             </div>
             <div class="row">
                     <div class="col-md-3"></div>
-                    <img class="img-responsive card-img col-md-6" style="height: 40px;" src={% static "app/city_verve_logo_resize_2.png" %}>
+                    <img class="img-responsive card-img col-md-6" style="height: 40px;" src={{logo}}>
                     <!--<img class="img-responsive card-img col-md-5" style="height: 30px;" src={% static "app/republic_logo.png" %}>-->
             </div>
         </div>

@@ -30,12 +30,22 @@
 
               </div>
           </nav>
-          <a class="btn btn-outline-primary" href="#">Sign out</a>
+          <a class="btn btn-outline-primary" href="{% url "logout" %}">Sign out</a>
       </div>
 
-      {% block content %}
-
-      {% endblock %}
+      {% if user.is_anonymous %}
+        <script>
+            // redirect
+            window.location.href = "{% url 'login' %}";
+        </script>
+      {% endif %}
+      {% if page.title == "login"%}
+        {% include "registration/login.html" %}
+        {% block login %}{% endblock %}
+      {% else %}
+        <!-- user is authenticated, generate & serve page -->
+        {% block content %}{% endblock %}
+      {% endif %}
 
       <footer class="footer border-top">
           <div class="container">

@@ -3,7 +3,7 @@ from setuptools import find_packages
 
 
 setup(name='rtk',
-      version="2.0.1c",
+      version="2.0.2",
       description='RTK',
       author_email='mark@douthwaite.io',
       packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
