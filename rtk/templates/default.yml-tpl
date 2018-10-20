@@ -24,6 +24,7 @@ application:
     style:
         css: {{ project }}/{{ project }}/static/app/content/republic.css
         logo: {{ client_logo }}
-        republic: {{ project }}/{{ project }}/static/app/content/republic_logo.png
+        republic: /{{project}}/{{project}}/static/app/republic_logo.png
+        smeiling: /{{project}}/{{project}}/static/app/smeiling_logo.png
 
     dashboards: null

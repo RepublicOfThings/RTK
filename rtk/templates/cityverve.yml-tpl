@@ -24,6 +24,8 @@ application:
     style:
         css: {{ django_base }}/{{ project }}/{{ project }}/static/app/content/republic.css
         logo: https://travelspirit.foundation/wp-content/uploads/2017/04/City-Verve-Logo.png
+        republic: /{{project}}/{{project}}/static/app/republic_logo.png
+        smeiling: /{{project}}/{{project}}/static/app/smeiling_logo.png
 
     dashboards:
         Alerts:

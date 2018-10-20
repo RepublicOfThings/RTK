@@ -24,8 +24,8 @@ application:
     style:
         css: /{{ project }}/{{ project }}/static/app/content/republic.css
         logo: https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Vodafone_2017_logo.svg/1024px-Vodafone_2017_logo.svg.png
-        republic: /{{project}}/{{project}}/static/app/content/republic_logo.png
-        smeiling: /{{project}}/{{project}}/static/app/content/smeiling_logo.png
+        republic: /{{project}}/{{project}}/static/app/republic_logo.png
+        smeiling: /{{project}}/{{project}}/static/app/smeiling_logo.png
 
     dashboards:
         Vodafone:
