@@ -15,8 +15,6 @@ CLIENT_LOGO = "{django_static}/content/placeholder.png"
 
 logging.basicConfig(level=logging.DEBUG, format=rtk_log_fmt)
 
-build_log.info("test", extra=dict(event="test", meta="other"))
-
 parser = argparse.ArgumentParser("rtk-app")
 
 subparsers = parser.add_subparsers(help="rtk-app subcommand help")
