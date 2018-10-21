@@ -75,7 +75,6 @@ def dashboards(request, name):
                              dash=dashboard_conf.get("dash"))
 
     return HttpResponse(render(request, 'pages/dashboard/index.html', {"title": title,
-                                                                       "css": design["css"],
-                                                                       "logo": design["logo"],
+                                                                       **design,
                                                                        "target": target,
                                                                        "dashboards": dashes}))
