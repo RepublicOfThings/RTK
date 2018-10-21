@@ -40,10 +40,11 @@ def login(request, template_name='registration/login.html',
         RemovedInDjango21Warning, stacklevel=2
     )
 
-    extra_context = {"title": "Home",
+    extra_context = extra_context or {}
+    extra_context.update({"title": "Home",
                      "css": design["css"],
                      "logo": design["logo"],
-                     "smeiling": design["smeiling"]}
+                     "smeiling": design["smeiling"]})
 
     print(extra_context)
     return LoginView.as_view(
