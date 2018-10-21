@@ -10,11 +10,17 @@ This package provides tools and utilities for the development and deployment of 
 with embedded Splunk dashboards. In particular, it supplies the `rtk-app` command line tool for _automating_ the deployment
 of these applications on a target system.
 
+## Features
+
+The principle features of RTK2 are:
+
+*  Automated deployment tools with minimal
+
 ## Workflow
 
 ### 0 Installation
 
-**Note: this section should be unnecessary (hence '0') -- the latest version of RTK should always be installed on the target system.**
+Note: this section should be unnecessary (hence '0') -- the latest version of RTK should always be installed on the target system.
 
 1) Clone the package from GitHub:
 
@@ -50,10 +56,6 @@ section below for more details.
 The `--template` argument indicates which template app to use. RTK2 is designed to support using arbitrarily many templates
 to specify the style of application. See the 'Available Templates' section for more details.
 
-At this stage, you should make sure your configuration file meets your needs. In particular look at the Splunk configuration,
-dashboards and styles in this file before continuing. An example file can be found below. In general, these files will sit 
-in: `.rtk_cache/{client}/{name}.yml`.
-
 ### 2 Activating an App
 
 To activate an app, run the following:
@@ -72,29 +74,7 @@ To make the changes live, perform a restart:
 rtk-app restart --name={app_name} --client={client_name}  
 ```
 
-### 3 Adding Superuser
-
-Before checking your nice new app, you should add a (admin) superuser to the app. This is done for security reasons. This
-should be done with:
-
-```commandline
-rtk-app superuser --name={app_name} --client={client_name}
->>> Username (leave blank to use 'republicuser'):
->>> Email address:
->>> Password:
->>> Password (again):
-
-```
-
-Without doing this, you may find yourself staring at the login page!
-
-To make the changes live, perform a restart:
-
-```commandline
-rtk-app restart --name={app_name} --client={client_name}  
-```
-
-### 4 Deactivating an App
+### 3 Deactivating an App
 
 To deactivate an app (i.e. take it offline, but without deleting the project itself), run the following:
 
@@ -108,7 +88,7 @@ To make the changes live, perform a restart:
 rtk-app restart --name={app_name} --client={client_name}  
 ```
 
-### 5 Deleting an App
+### 4 Deleting an App
 
 If you need to delete the app run the following:
 
@@ -206,43 +186,16 @@ Adding dashboards can be achieved as follows:
           app: rot_smart_homes_app
 ```
 
-If you have not yet activated the app, you can simply run:
-
-```commandline
-rtk-app activate --name=random_council --client=random_council 
-```
-
-And restart the server, and you should see the dashboard added to the navigation:
-
-![](dashboards.png)
-
-If you have already activated the app, you will need to run:
-
-```commandline
-rtk-app delete --name=random_council --client=random_council 
-```
-
-Followed by:
-
-```commandline
-rtk-app activate --name=random_council --client=random_council 
-```
-
-And finally:
-
-```commandline
-rtk-app restart --name=random_council --client=random_council 
-```
+Image ![](/Users/MarkDouthwaite/Documents/GitHub/RTK/dashboards.png)
 
 #### Templates
-
-As of Version 2.0.3, RTK ships with three application templates:
 
 Template|Description
 :----:|:----:
 default|A very basic template with no defined dashboard and placeholder branding.
 vodafone|A Vodafone-branded app with a single dashboard.
 cityverve|A CityVerve-branded ap with two dashboards (Alerts, Connected Homes).
+
 
 #### Additional Arguments
 

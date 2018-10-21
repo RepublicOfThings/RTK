@@ -27,6 +27,7 @@ class RTKApp(object):
 
         build_log.info("Cloning configuration into application structure...",
                        extra=dict(event="TASK", meta="| IN PROGRESS"))
+
         copyfile(self._config_path, os.path.join(self.setup.get("paths").get("django_app"), "config.yml"))
 
         build_log.info("Build task complete",
@@ -36,11 +37,6 @@ class RTKApp(object):
         build_log.info("Beginning activation task...",
                        extra=dict(event="TASK", meta="| IN PROGRESS"))
         paths = self.setup.get("paths")
-        if not os.path.exists(self.path):
-            build_log.info("User attempted to activate an unbuilt project, attempting to build it for them...",
-                           extra=dict(event="TASK", meta="| IN PROGRESS"))
-            self.build()
-
         build_log.info("Modifying Bitnami Apache configuration...",
                        extra=dict(event="TASK", meta="| IN PROGRESS"))
         append_apache_app(paths.get("bitnami_conf"), django_project=paths.get("django_project"))
@@ -66,7 +62,7 @@ class RTKApp(object):
         rmtree(path)
         build_log.info("Deletion task complete",
                        extra=dict(event="TASK", meta="| COMPLETE"))
-        
+
     def restart(self):
         paths = self.setup.get("paths")
         subprocess.call(["bash", paths["sys_ctl"], "restart"])

@@ -1,9 +1,16 @@
 import os
+import subprocess
 from rtk.utils.logs import build_log
 from rtk import RTK_CACHE
 from rtk.core.application import RTKApp
 from rtk.core.processing import render, process_paths, process_app_name, process_splunk_credentials
 from rtk.utils import template_path
+
+
+def superuser(config, **kwargs):
+    app = RTKApp.from_cache(config, **kwargs)
+    path = app.setup.get("paths").get("django_project")
+    subprocess.call(["python3", os.path.join(path, "manage.py"), "createsuperuser"])
 
 
 def generate(config, fmt="yml"):
@@ -29,15 +36,21 @@ def deactivate(config, **kwargs):
     app.deactivate()
     build_log.info(f"Deactivated '{config.client}/{config.name}'",
                    extra=dict(event="CLI", meta="| COMPLETE"))
+    if config.restart:
+        restart(config, **kwargs)
 
 
 def activate(config, **kwargs):
     build_log.info(f"Activating '{config.client}/{config.name}'",
                    extra=dict(event="CLI", meta="| IN PROGRESS"))
     app = RTKApp.from_cache(config, **kwargs)
+    if not app.exists:
+        app.build()
     app.activate()
     build_log.info(f"Activated '{config.client}/{config.name}'",
                    extra=dict(event="CLI", meta="| COMPLETE"))
+    if config.restart:
+        restart(config, **kwargs)
 
 
 def build(config, **kwargs):
@@ -58,6 +71,9 @@ def delete(config, **kwargs):
     app.delete()
     build_log.info(f"Application deleted.",
                    extra=dict(event="CLI", meta="| COMPLETE"))
+    if config.restart:
+        restart(config, **kwargs)
+
 
 def restart(config, **kwargs):
     build_log.info(f"Restarting your application '{config.name}'...",
